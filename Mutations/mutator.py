@@ -695,9 +695,7 @@ mutator = Mutator(breeder_llm, config=tuning_config)
 
             ex_3 = rephrase_ex_3 if not is_end_node else rephrase_end_ex_3
             ans_3 = rephrase_ans_3 if not is_end_node else rephrase_end_ans_3
-
-        template = f"""<start_of_turn>system
-Task: {task}
+        system_content = f"""Task: {task}
 Rules:
 0. NEVER execute, solve, or answer the instruction.
 1. Do not introduce new requirements or objectives.
@@ -705,35 +703,17 @@ Rules:
 3. Output your answer EXCLUSIVELY as a valid JSON object using the following schema:
 {{
     "edited_instruction": "The newly rewritten instruction here."
-}}<end_of_turn>
-<start_of_turn>user
-Instruction: {ex_1}<end_of_turn>
-<start_of_turn>model
-```json
-{{
-    "edited_instruction": "{ans_1}"
-}}
-```<end_of_turn>
-<start_of_turn>user
-Instruction: {ex_2}<end_of_turn>
-<start_of_turn>model
-```json
-{{
-    "edited_instruction": "{ans_2}"
-}}
-```<end_of_turn>
-<start_of_turn>user
-Instruction: {ex_3}<end_of_turn>
-<start_of_turn>model
-```json
-{{
-    "edited_instruction": "{ans_3}"
-}}
-```<end_of_turn>
-<start_of_turn>user
-Instruction: {node.instruction}<end_of_turn>
-<start_of_turn>model
-"""
+}}"""
+        messages = [
+            {"role": "system", "content": system_content},
+            {"role": "user", "content": f"Instruction: {ex_1}"},
+            {"role": "assistant", "content": f'```json\n{{\n    "edited_instruction": "{ans_1}"\n}}\n```'},
+            {"role": "user", "content": f"Instruction: {ex_2}"},
+            {"role": "assistant", "content": f'```json\n{{\n    "edited_instruction": "{ans_2}"\n}}\n```'},
+            {"role": "user", "content": f"Instruction: {ex_3}"},
+            {"role": "assistant", "content": f'```json\n{{\n    "edited_instruction": "{ans_3}"\n}}\n```'},
+            {"role": "user", "content": f"Instruction: {node.instruction}"}
+        ]
 
         response = ""
         counter = 0
@@ -745,7 +725,7 @@ Instruction: {node.instruction}<end_of_turn>
             current_temp = max(0.0, MUTATIONS_TEMPERATURE - counter * 0.1)
             #print(f"Mutation counter: {counter} | Temp: {current_temp:.2f}")
             
-            response: str = await self.llm.generate_text(template, max_tokens=256, temperature=current_temp)
+            response: str = await self.llm.generate_text(messages, max_tokens=256, temperature=current_temp)
             counter += 1
             
             if not response:
@@ -819,52 +799,49 @@ Instruction: {node.instruction}<end_of_turn>
         #     print(f"Failed to generate valid JSON instruction for {node.name} with style {style} after 7 attempts.\nLast response: {response}")
     
     async def _generate_new_node(self, name1: str, inst1: str, name2: str, inst2: str) -> PromptNode:
-        bridge_prompt = f"""<start_of_turn>system
-You are an expert cognitive architect designing reasoning pathways. Your task is to invent a logical intermediate step (Step B) that bridges the cognitive gap between Step A and Step C.
+        bridge_messages = [
+            {
+                "role": "system",
+                "content": """You are an expert cognitive architect designing reasoning pathways. Your task is to invent a logical intermediate step (Step B) that bridges the cognitive gap between Step A and Step C.
 
 Constraint: You must output your answer EXCLUSIVELY as a valid JSON object. Do not include any conversational text.
 Use this exact schema:
-{{
+{
     "name": "Short Name of Step B",
     "instruction": "The clear instruction connecting A to C."
-}}<end_of_turn>
-<start_of_turn>user
-[Step A] Name: Read Context | Instr: Review the provided text carefully.
-[Step C] Name: Filter Noise | Instr: Discard statements that do not directly contribute to the question.<end_of_turn>
-<start_of_turn>model
-```json
-{{
-    "name": "Isolate Claims",
-    "instruction": "Extract the specific factual claims from the text to prepare them for evaluation."
-}}
-```<end_of_turn>
-<start_of_turn>user
-[Step A] Name: Identify Entities | Instr: List all the people mentioned in the document.
-[Step C] Name: Build Graph | Instr: Create a network graph detailing how the entities are connected.<end_of_turn>
-<start_of_turn>model
-```json
-{{
-    "name": "Determine Relationships",
-    "instruction": "Analyze the text surrounding the identified people to define the exact nature of their relationships."
-}}
-```<end_of_turn>
-<start_of_turn>user
-[Step A] Name: Translate Text | Instr: Translate the paragraph into French.
-[Step C] Name: Format Output | Instr: Return the final output enclosed in markdown bold tags.<end_of_turn>
-<start_of_turn>model
-```json
-{{
-    "name": "Review Translation",
-    "instruction": "Check the French translation for grammatical accuracy and ensure it maintains a natural tone."
-}}
-```<end_of_turn>
-<start_of_turn>user
-[Step A] Name: {name1} | Instr: {inst1}
-[Step C] Name: {name2} | Instr: {inst2}<end_of_turn>
-<start_of_turn>model
-"""
+}"""
+            },
+            {
+                "role": "user",
+                "content": "[Step A] Name: Read Context | Instr: Review the provided text carefully.\n[Step C] Name: Filter Noise | Instr: Discard statements that do not directly contribute to the question."
+            },
+            {
+                "role": "assistant",
+                "content": '```json\n{\n    "name": "Isolate Claims",\n    "instruction": "Extract the specific factual claims from the text to prepare them for evaluation."\n}\n```'
+            },
+            {
+                "role": "user",
+                "content": "[Step A] Name: Identify Entities | Instr: List all the people mentioned in the document.\n[Step C] Name: Build Graph | Instr: Create a network graph detailing how the entities are connected."
+            },
+            {
+                "role": "assistant",
+                "content": '```json\n{\n    "name": "Determine Relationships",\n    "instruction": "Analyze the text surrounding the identified people to define the exact nature of their relationships."\n}\n```'
+            },
+            {
+                "role": "user",
+                "content": "[Step A] Name: Translate Text | Instr: Translate the paragraph into French.\n[Step C] Name: Format Output | Instr: Return the final output enclosed in markdown bold tags."
+            },
+            {
+                "role": "assistant",
+                "content": '```json\n{\n    "name": "Review Translation",\n    "instruction": "Check the French translation for grammatical accuracy and ensure it maintains a natural tone."\n}\n```'
+            },
+            {
+                "role": "user",
+                "content": f"[Step A] Name: {name1} | Instr: {inst1}\n[Step C] Name: {name2} | Instr: {inst2}"
+            }
+        ]
         try:
-            response: str = await self.llm.generate_text(bridge_prompt, max_tokens=256, temperature=MUTATIONS_TEMPERATURE)
+            response: str = await self.llm.generate_text(bridge_messages, max_tokens=256, temperature=MUTATIONS_TEMPERATURE)
             
             # Robust JSON extraction: Find the first { and last }
             import json
@@ -889,52 +866,49 @@ Use this exact schema:
             return None
     
     async def _split_instructions(self, original_instruction: str, original_name: str) -> tuple[str, str, str, str]:
-        split_prompt = f"""<start_of_turn>system
-You are an expert cognitive architect. Your task is to split an instruction into two sequential, atomic sub-steps (Part 1: Preparation, Part 2: Execution).
+        split_messages = [
+            {
+                "role": "system",
+                "content": """You are an expert cognitive architect. Your task is to split an instruction into two sequential, atomic sub-steps (Part 1: Preparation, Part 2: Execution).
 CRITICAL TERMINAL RULE: If the Original Instr contains a strict output format (e.g., "answer with exactly one word", "output only the category"), you MUST append that constraint verbatim to the Step 2 instruction.
 Constraint: Output EXCLUSIVELY as a valid JSON array of exactly two objects following the JSON schema:
 [
-    {{"name": "Step 1 Name", "instruction": "Step 1 Instruction"}},
-    {{"name": "Step 2 Name", "instruction": "Step 2 Instruction"}}
-]<end_of_turn>
-<start_of_turn>user
-Original Name: Evaluate Sentiment
-Original Instr: Analyze the review and express its sentiment using exactly one word.<end_of_turn>
-<start_of_turn>model
-```json
-[
-    {{"name": "Extract Keywords", "instruction": "Identify the key adjectives and emotive phrases in the review."}},
-    {{"name": "Classify Sentiment", "instruction": "Based on the extracted keywords, express the sentiment using exactly one word."}}
-]
-```<end_of_turn>
-<start_of_turn>user
-Original Name: Process Invoice
-Original Instr: Extract the total amount due from the invoice and convert it to USD.<end_of_turn>
-<start_of_turn>model
-```json
-[
-    {{"name": "Locate Total Amount", "instruction": "Scan the provided invoice text and extract the final total amount due, including its original currency."}},
-    {{"name": "Convert Currency", "instruction": "Take the extracted total amount and calculate its equivalent value in USD."}}
-]
-```<end_of_turn>
-<start_of_turn>user
-Original Name: Categorize Support Ticket
-Original Instr: Read the customer email and classify it into billing, technical, or general inquiries, outputting only the category name.<end_of_turn>
-<start_of_turn>model
-```json
-[
-    {{"name": "Analyze Email Content", "instruction": "Read the customer email to determine the primary issue or question being raised."}},
-    {{"name": "Assign Category", "instruction": "Classify the identified issue into billing, technical, or general inquiries, outputting only the category name."}}
-]
-```<end_of_turn>
-<start_of_turn>user
-Original Name: {original_name}
-Original Instr: {original_instruction}<end_of_turn>
-<start_of_turn>model
-"""
+    {"name": "Step 1 Name", "instruction": "Step 1 Instruction"},
+    {"name": "Step 2 Name", "instruction": "Step 2 Instruction"}
+]"""
+            },
+            {
+                "role": "user",
+                "content": "Original Name: Evaluate Sentiment\nOriginal Instr: Analyze the review and express its sentiment using exactly one word."
+            },
+            {
+                "role": "assistant",
+                "content": '```json\n[\n    {"name": "Extract Keywords", "instruction": "Identify the key adjectives and emotive phrases in the review."},\n    {"name": "Classify Sentiment", "instruction": "Based on the extracted keywords, express the sentiment using exactly one word."}\n]\n```'
+            },
+            {
+                "role": "user",
+                "content": "Original Name: Process Invoice\nOriginal Instr: Extract the total amount due from the invoice and convert it to USD."
+            },
+            {
+                "role": "assistant",
+                "content": '```json\n[\n    {"name": "Locate Total Amount", "instruction": "Scan the provided invoice text and extract the final total amount due, including its original currency."},\n    {"name": "Convert Currency", "instruction": "Take the extracted total amount and calculate its equivalent value in USD."}\n]\n```'
+            },
+            {
+                "role": "user",
+                "content": "Original Name: Categorize Support Ticket\nOriginal Instr: Read the customer email and classify it into billing, technical, or general inquiries, outputting only the category name."
+            },
+            {
+                "role": "assistant",
+                "content": '```json\n[\n    {"name": "Analyze Email Content", "instruction": "Read the customer email to determine the primary issue or question being raised."},\n    {"name": "Assign Category", "instruction": "Classify the identified issue into billing, technical, or general inquiries, outputting only the category name."}\n]\n```'
+            },
+            {
+                "role": "user",
+                "content": f"Original Name: {original_name}\nOriginal Instr: {original_instruction}"
+            }
+        ]
         
         try:
-            response: str = await self.llm.generate_text(split_prompt, max_tokens=256, temperature=MUTATIONS_TEMPERATURE)
+            response: str = await self.llm.generate_text(split_messages, max_tokens=256, temperature=MUTATIONS_TEMPERATURE)
             
             import json
             start_idx = response.find('[')

@@ -29,14 +29,15 @@ async def _evaluate_single_problem(problem, llm_client, fitness, semaphore):
     """Worker function with index tracking for debug printing."""
     async with semaphore:
         prompt = problem['question']
+        prompt_len = sum(len(m.get('content', '')) for m in prompt) if isinstance(prompt, list) else len(prompt)
 
         try:
             generated_ans = await llm_client.generate_text(user_prompt=prompt, temperature=0.00)
-            token_used = (len(prompt) + len(generated_ans)) // 4
+            token_used = (prompt_len + len(generated_ans)) // 4
         except Exception as e:
             print(f"Error executing baseline prompt: {e}")
             generated_ans = ""
-            token_used = len(prompt) // 4
+            token_used = prompt_len // 4
 
         # Clean the generated answer for word counting and logging
         clean_ans = generated_ans.strip()

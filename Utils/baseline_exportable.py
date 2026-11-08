@@ -24,18 +24,23 @@ async def _evaluate_single_baseline_problem(
         else:
             prompt_string = query
 
+        if isinstance(prompt_string, list):
+            prompt_len = sum(len(m.get('content', '')) for m in prompt_string)
+        else:
+            prompt_len = len(prompt_string)
+
         try:
             # 2. STRICT DECODING: Enforce the 1-word constraint at the hardware level
             generated_ans = await llm_client.generate_text(
                 user_prompt=prompt_string, 
                 temperature=0.0,
-                max_tokens=12
+                max_tokens=16
             )
-            token_used = (len(prompt_string) + len(generated_ans)) // 4
+            token_used = (prompt_len + len(generated_ans)) // 4
         except Exception as e:
             #print(f"Error executing baseline prompt: {e}")
             generated_ans = ""
-            token_used = len(prompt_string) // 4
+            token_used = prompt_len // 4
 
         # 3. Clean and parse
         clean_ans = generated_ans.replace(".", "").replace("\n", "").strip().lower()

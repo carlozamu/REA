@@ -59,32 +59,17 @@ def generate_prompt_templates(dataset_batch: list[dict], output_filename: str = 
             sampled_example = random.choice(examples_by_length[hop])
             name1, name2 = extract_names(sampled_example["query"])
             
-            # Construct the chat block for this specific example
-            block = (
-                f"<start_of_turn>user\n"
-                f"Story: {sampled_example['story']}\n"
-                f"CRITICAL TASK: State the family relationship. Output EXACTLY ONE WORD from the list above. {name2} is {name1}'s?<end_of_turn>\n"
-                f"<start_of_turn>model\n"
-                f"{sampled_example['answer']}<end_of_turn>"
-            )
-            few_shot_blocks.append(block)
+            block_user = {
+                "role": "user",
+                "content": f"Story: {sampled_example['story']}\nCRITICAL TASK: State the family relationship. Output EXACTLY ONE WORD from the list above. {name2} is {name1}'s?"
+            }
+            block_asst = {
+                "role": "assistant",
+                "content": sampled_example['answer']
+            }
+            few_shot_blocks.extend([block_user, block_asst])
         
-        # Join the sampled blocks together
-        history_string = "\n".join(few_shot_blocks)
-        
-        # Build the final f-string template, leaving {story}, {name1}, and {name2} unformatted
-        # using double braces {{ }} to escape them in the output code.
-        full_template = (
-            f"f\"\"\"<start_of_turn>system\n"
-            f"Possible relationships: [{options_string}]<end_of_turn>\n"
-            f"{history_string}\n"
-            f"<start_of_turn>user\n"
-            f"Story: {{story}}\n"
-            f"CRITICAL TASK: State the family relationship. Output EXACTLY ONE WORD from the list above. {{name2}} is {{name1}}'s?<end_of_turn>\n"
-            f"<start_of_turn>model\n"
-            f"\"\"\""
-        )
-        
+        full_template = [{"role": "system", "content": f"Possible relationships: [{options_string}]"}] + few_shot_blocks
         generated_templates[config_name] = full_template
 
     # 4. Serialization

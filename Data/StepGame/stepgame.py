@@ -208,7 +208,6 @@ class StepGameManager(CLUTTRManager):
     def build_prompt_stepgame_baseline(story: str, query: str, subset_number:int = 1) -> str:
         name1, name2 = StepGameManager.extract_query_names(query)
 
-        # 1. Place the strict constraint at the absolute bottom (Recency Bias)
         prompt = f"""Story:
 {story}
 
@@ -225,9 +224,7 @@ Possible answers:
 
 Task: State only the one spatial relation label word (from the posible answers) that describes the spatial relationship between {name1} and {name2}. {query}"""
 
-        baseline_prompt = f"<start_of_turn>user\n{prompt}\n<end_of_turn>\n<start_of_turn>model\n"
-        
-        return baseline_prompt
+        return prompt
     
     @staticmethod
     def build_prompt_stepgame_few_shots_original(story: str, query: str, subset_number: int) -> str:
@@ -299,26 +296,22 @@ Task: State only the one spatial relation label word (from the posible answers) 
                             ]))
             questions.append("CRITICAL TASK: State the spatial relation between P and K. Output EXACTLY ONE WORD from the list above. Position of P relative to K:")
             answers.append("upper-right")
-        few_shots_prompt_hops = f"""<start_of_turn>system
-Possible spatial relations: [{", ".join(options)}]<end_of_turn>
-"""
+        messages = [
+            {"role": "system", "content": f"Possible spatial relations: [{', '.join(options)}]" }
+        ]
         for i in range(len(stories)):
-            few_shots_prompt_hops += f"""<start_of_turn>user
-Story: {stories[i]}
-{questions[i]}<end_of_turn>
-<start_of_turn>model
-{answers[i]}<end_of_turn>
-"""
+            messages.append({"role": "user", "content": f"Story: {stories[i]}\n{questions[i]}"})
+            messages.append({"role": "assistant", "content": answers[i]})
+
         n1, n2 = StepGameManager.extract_query_names(query)
-        few_shots_prompt = few_shots_prompt_hops + f"""<start_of_turn>user
-Story: {story}
-CRITICAL TASK: State the spatial relation between {n1} and {n2}. Output EXACTLY ONE WORD from the list above. Position of {n1} relative to {n2}?<end_of_turn>
-<start_of_turn>model
-"""
-        return few_shots_prompt
+        messages.append({
+            "role": "user",
+            "content": f"Story: {story}\nCRITICAL TASK: State the spatial relation between {n1} and {n2}. Output EXACTLY ONE WORD from the list above. Position of {n1} relative to {n2}?"
+        })
+        return messages
 
     @staticmethod
-    def build_prompt_stepgame_few_shots(story: str, query: str, subset_number: int) -> str:
+    def build_prompt_stepgame_few_shots(story: str, query: str, subset_number: int) -> list[dict]:
         name1, name2 = StepGameManager.extract_query_names(query)
         options = "above", "below", "left", "lower-left", "lower-right", "overlap", "right", "upper-left", "upper-right"
         stories = []
@@ -370,23 +363,19 @@ CRITICAL TASK: State the spatial relation between {n1} and {n2}. Output EXACTLY 
             ]))
             questions.append("CRITICAL TASK: State the spatial relation between V and Q. Output EXACTLY ONE WORD from the list above. Position of V relative to Q:")
             answers.append("upper-right")
-        few_shots_prompt_hops = f"""<start_of_turn>system
-Possible spatial relations: [{", ".join(options)}]<end_of_turn>
-"""
+        messages = [
+            {"role": "system", "content": f"Possible spatial relations: [{', '.join(options)}]" }
+        ]
         for i in range(len(stories)):
-            few_shots_prompt_hops += f"""<start_of_turn>user
-Story: {stories[i]}
-{questions[i]}<end_of_turn>
-<start_of_turn>model
-{answers[i]}<end_of_turn>
-"""
+            messages.append({"role": "user", "content": f"Story: {stories[i]}\n{questions[i]}"})
+            messages.append({"role": "assistant", "content": answers[i]})
+
         n1, n2 = StepGameManager.extract_query_names(query)
-        few_shots_prompt = few_shots_prompt_hops + f"""<start_of_turn>user
-Story: {story}
-CRITICAL TASK: State the spatial relation between {n1} and {n2}. Output EXACTLY ONE WORD from the list above. Position of {n1} relative to {n2}?<end_of_turn>
-<start_of_turn>model
-"""
-        return few_shots_prompt
+        messages.append({
+            "role": "user",
+            "content": f"Story: {story}\nCRITICAL TASK: State the spatial relation between {n1} and {n2}. Output EXACTLY ONE WORD from the list above. Position of {n1} relative to {n2}?"
+        })
+        return messages
         
     
     @staticmethod

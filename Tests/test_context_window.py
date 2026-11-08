@@ -67,9 +67,9 @@ async def run_reasoning_depth_test(mode="2D"):
                 )
             
             # --- 1. SETUP NODE ---
-            prompt += f"<start_of_turn>user\n{setup_rules}<end_of_turn>\n<start_of_turn>model\n"
-            setup_response = await llm.generate_text(user_prompt=prompt, temperature=0.0)
-            prompt += setup_response.strip() + "\n<end_of_turn>\n"
+            messages = [{"role": "user", "content": setup_rules}]
+            setup_response = await llm.generate_text(user_prompt=messages, temperature=0.0)
+            messages.append({"role": "assistant", "content": setup_response.strip()})
             
             # --- 2. INTERMEDIATE NODES ---
             for i in range(depth):
@@ -86,24 +86,24 @@ async def run_reasoning_depth_test(mode="2D"):
                     true_x += dx; true_y += dy; true_z += dz
                     format_instruction = "'Last Position: (X, Y, Z)'"
 
-                prompt += "<start_of_turn>user\n"
-                prompt += f"Step {i+1}: Move 1 unit {direction}. Apply the rule for {direction} to the last position computed to get the updated position. Format your answer exactly as: {format_instruction}.\n"
-                prompt += "<end_of_turn>\n<start_of_turn>model\n"
+                messages.append({
+                    "role": "user",
+                    "content": f"Step {i+1}: Move 1 unit {direction}. Apply the rule for {direction} to the last position computed to get the updated position. Format your answer exactly as: {format_instruction}."
+                })
                 
-                inter_response = await llm.generate_text(user_prompt=prompt, temperature=0.0)
-                prompt += inter_response.strip() + "\n<end_of_turn>\n"
+                inter_response = await llm.generate_text(user_prompt=messages, temperature=0.0)
+                messages.append({"role": "assistant", "content": inter_response.strip()})
 
             # --- 3. END NODE ---
-            prompt += "<start_of_turn>user\n"
             if mode == "1D":
-                prompt += "Final Task: What is the current final floor? Output ONLY the number of the exact current floor, with no other text.\n"
+                final_task = "Final Task: What is the current final floor? Output ONLY the number of the exact current floor, with no other text.\n"
             elif mode == "2D":
-                prompt += "Final Task: What is the current final (X, Y) coordinate of the robot? Output ONLY the coordinate in the format (X, Y) with no other text.\n"
+                final_task = "Final Task: What is the current final (X, Y) coordinate of the robot? Output ONLY the coordinate in the format (X, Y) with no other text.\n"
             elif mode == "3D":
-                prompt += "Final Task: What is the final (X, Y, Z) coordinate? Output ONLY the coordinate in the format (X, Y, Z) with no other text.\n"
-            prompt += "<end_of_turn>\n<start_of_turn>model\n"
+                final_task = "Final Task: What is the final (X, Y, Z) coordinate? Output ONLY the coordinate in the format (X, Y, Z) with no other text.\n"
+            messages.append({"role": "user", "content": final_task})
 
-            final_response = await llm.generate_text(user_prompt=prompt, temperature=0.0, max_tokens=15)
+            final_response = await llm.generate_text(user_prompt=messages, temperature=0.0, max_tokens=15)
             last_output = final_response.strip()
             
             # --- 4. EVALUATION ---
@@ -134,7 +134,7 @@ async def run_reasoning_depth_test(mode="2D"):
             if is_correct:
                 success_count += 1
                 
-            total_text = prompt + last_output
+            total_text = " ".join(m.get("content", "") for m in messages) + " " + last_output
             #print(f"Trial {trial+1} Prompt and Response:\n{total_text}\n{'-'*50}")
             approx_tokens = int(len(total_text.split()) / 4)  # Rough estimate: 4 characters per token
             total_tokens_for_depth += approx_tokens

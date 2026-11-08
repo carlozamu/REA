@@ -10,16 +10,19 @@ class Trait:
         self.node = node
         self.llm = llm_client
 
-    async def execute(self, context: str, is_last: bool) -> tuple[int, int, float, str]:
+    async def execute(self, context: str | list[dict], is_last: bool) -> tuple[int, int, float, str]:
         """
         Executes and returns (in_tokens, out_tokens, duration, answer).
         """        
-        max_tokens = 128 if not is_last else 5
+        max_tokens = 128 if not is_last else 16
         start_t = time.time()
         answer = await self.llm.generate_text(user_prompt=context, temperature=0.0, max_tokens=max_tokens)
         duration = time.time() - start_t
         
-        in_tokens = len(context) // 4
+        if isinstance(context, list):
+            in_tokens = sum(len(m.get('content', '')) for m in context) // 4
+        else:
+            in_tokens = len(context) // 4
         out_tokens = len(answer) // 4
 
         # print(f"Executed Trait '{self.node.name}' (ID: {self.node.id}) in {duration:.2f}s | In Tokens: {in_tokens} | Out Tokens: {out_tokens}")

@@ -31,7 +31,8 @@ from Species.speciation_engine import SpeciationEngine
 from Z_Baselines.run_ERA_best import run_ERA_best_individual
 
 # --- Configuration ---
-MODEL_NAME = "google/gemma-3-1b-it" 
+GEMMA_MODEL_NAME = "google/gemma-3-1b-it" 
+QWEN_MODEL_NAME = "Qwen/Qwen3.5-0.8B"  
 BASE_URL = "http://localhost:8000"  
 MAX_GENERATIONS = 50
 MAX_TIME_SECONDS = 3600 * 15 # 15 Hours
@@ -43,7 +44,7 @@ TARGET_SPECIES = 5
 # --- Main Execution ---
 async def run_evolution():
     # 1. Initialize API and Core Tools (Required for both new runs and rehydrated runs)
-    llm_client = LLM(model_name=MODEL_NAME, base_url=BASE_URL) 
+    llm_client = LLM(model_name=QWEN_MODEL_NAME, base_url=BASE_URL) 
     fitness_evaluator = Fitness(llm=llm_client, use_reasoning=False)
     mutator = Mutator(breeder_llm_client=llm_client)
     dataset_manager = CLUTTRManager(split_config="gen_train234_test2to10")

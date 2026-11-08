@@ -239,12 +239,10 @@ Possible answers:
 
 Task: State only the one kinship word (from the posible answers) that describes the family relationship between {name2} and {name1}. {name2} is {name1}'s?"""
 
-        baseline_prompt = f"<start_of_turn>user\n{prompt}\n<end_of_turn>\n<start_of_turn>model\n"
-        
-        return baseline_prompt
+        return prompt
     
     @staticmethod
-    def build_prompt_clutrr_few_shots_try_examples(story: str, query: str, examples: str) -> str:
+    def build_prompt_clutrr_few_shots_try_examples(story: str, query: str, examples: list[dict] | str = None) -> list[dict]:
         clean_query = query.replace("(", "").replace(")", "").replace("'", "")
         try:
             name1, name2 = [name.strip() for name in clean_query.split(',')]
@@ -255,40 +253,26 @@ Task: State only the one kinship word (from the posible answers) that describes 
         options = "aunt, son-in-law, grandfather, brother, sister, father, mother, grandmother, uncle, daughter-in-law, grandson, granddaughter, father-in-law, mother-in-law, nephew, son, daughter, niece"
 
         # 2. Construct true multi-turn few-shot history        
-        few_shots_prompt_0 = f"""<start_of_turn>system
-Possible relationships: [{options}]<end_of_turn>
-<start_of_turn>user
-Story: [Ashley]'s daughter, [Lillian], asked her mom to read her a story. [Nicholas]'s sister [Lillian] asked him for some help planting her garden.
-CRITICAL TASK: State the family relationship. Output EXACTLY ONE WORD from the list above. Nicholas is Ashley's?<end_of_turn>
-<start_of_turn>model
-son<end_of_turn>
-<start_of_turn>user
-Story: [June] went with her husband [James] to get a nice dinner for their anniversary. [Dale] is taking his son [James] out for coffee.
-CRITICAL TASK: State the family relationship. Output EXACTLY ONE WORD from the list above. June is Dale's?<end_of_turn>
-<start_of_turn>model
-daughter-in-law<end_of_turn>
-<start_of_turn>user
-Story: [Wayne] was looking forward to his wife [Nancy] coming back home. She was away for the weekend with her daughter [Lorraine].
-CRITICAL TASK: State the family relationship. Output EXACTLY ONE WORD from the list above. Lorraine is Wayne's?<end_of_turn>
-<start_of_turn>model
-daughter<end_of_turn>
-<start_of_turn>user
-Story: {story}
-CRITICAL TASK: State the family relationship. Output EXACTLY ONE WORD from the list above. {name2} is {name1}'s?<end_of_turn>
-<start_of_turn>model
-"""        
+        few_shots_messages_0 = [
+            {"role": "system", "content": f"Possible relationships: [{options}]"},
+            {"role": "user", "content": "Story: [Ashley]'s daughter, [Lillian], asked her mom to read her a story. [Nicholas]'s sister [Lillian] asked him for some help planting her garden.\nCRITICAL TASK: State the family relationship. Output EXACTLY ONE WORD from the list above. Nicholas is Ashley's?"},
+            {"role": "assistant", "content": "son"},
+            {"role": "user", "content": "Story: [June] went with her husband [James] to get a nice dinner for their anniversary. [Dale] is taking his son [James] out for coffee.\nCRITICAL TASK: State the family relationship. Output EXACTLY ONE WORD from the list above. June is Dale's?"},
+            {"role": "assistant", "content": "daughter-in-law"},
+            {"role": "user", "content": "Story: [Wayne] was looking forward to his wife [Nancy] coming back home. She was away for the weekend with her daughter [Lorraine].\nCRITICAL TASK: State the family relationship. Output EXACTLY ONE WORD from the list above. Lorraine is Wayne's?"},
+            {"role": "assistant", "content": "daughter"},
+            {"role": "user", "content": f"Story: {story}\nCRITICAL TASK: State the family relationship. Output EXACTLY ONE WORD from the list above. {name2} is {name1}'s?"}
+        ]
         
-        final_part = f"""<start_of_turn>user
-Story: {story}
-CRITICAL TASK: State the family relationship. Output EXACTLY ONE WORD from the list above. {name2} is {name1}'s?<end_of_turn>
-<start_of_turn>model
-"""        
-        few_shots_prompt = examples + final_part
+        if examples and isinstance(examples, list):
+            few_shots_prompt = list(examples) + [{"role": "user", "content": f"Story: {story}\nCRITICAL TASK: State the family relationship. Output EXACTLY ONE WORD from the list above. {name2} is {name1}'s?"}]
+        else:
+            few_shots_prompt = few_shots_messages_0
         
         return few_shots_prompt
     
     @staticmethod
-    def build_prompt_clutrr_few_shots(story: str, query: str, subset_number:int, examples:str = "" ) -> str:
+    def build_prompt_clutrr_few_shots(story: str, query: str, subset_number:int, examples:str = "" ) -> list[dict]:
         clean_query = query.replace("(", "").replace(")", "").replace("'", "")
         try:
             name1, name2 = [name.strip() for name in clean_query.split(',')]
@@ -299,55 +283,32 @@ CRITICAL TASK: State the family relationship. Output EXACTLY ONE WORD from the l
         options = "aunt, son-in-law, grandfather, brother, sister, father, mother, grandmother, uncle, daughter-in-law, grandson, granddaughter, father-in-law, mother-in-law, nephew, son, daughter, niece"
 
         # 2. Construct true multi-turn few-shot history        
-        few_shots_prompt_6_hops = f"""<start_of_turn>system
-Possible relationships: [{options}]<end_of_turn>
-<start_of_turn>user
-Story: [Seth] and his grandmother [Mary] went to the science museum. They both had fun, and learned some things, too. [Arthur] enjoys going fishing with his brother. His name is [Warren]. [Seth] and his brother [Warren] always played pranks on each other [Warren] was disappointed that his father, [Alvin], would n't be at the play to see him perform. [Warren] took his son [Alvin] out to play gold later that night. [Warren] played chess with his brother [Arthur].
-CRITICAL TASK: State the family relationship. Output EXACTLY ONE WORD from the list above. Mary is Warren's?<end_of_turn>
-<start_of_turn>model
-grandmother<end_of_turn>
-<start_of_turn>user
-Story: [Ross] went to his brother [Michael]'s Birthday party [Ronald]'s aunt [Erica] likes to drink a little bit too much wine at family gatherings. [Patrick] asked his brother [Ross] if he would come help him fix his car next weekend. [Erica] was mad at her son, [Michael]. She found he'd been stealing from her purse. [Robert] would n't let his son [James] go to the park by himself. [James]'s brother [Ronald] offered to go with him.
-CRITICAL TASK: State the family relationship. Output EXACTLY ONE WORD from the list above. Patrick is Robert's?<end_of_turn>
-<start_of_turn>model
-nephew<end_of_turn>
-<start_of_turn>user
-Story: [Patrick]'s father, [Joseph], went bowling with his sister, [Katherine]. [Katherine] and her son [Ronald] went out to lunch together yesterday. [Alfredo] went to the Farmer's market with his mother [Erica] and his brother [Patrick]. [Ronald] went to the game with his sister [Charlsie].
-CRITICAL TASK: State the family relationship. Output EXACTLY ONE WORD from the list above. Charlsie is Erica's?<end_of_turn>
-<start_of_turn>model
-niece<end_of_turn>
-<start_of_turn>user
-Story: {story}
-CRITICAL TASK: State the family relationship. Output EXACTLY ONE WORD from the list above. {name2} is {name1}'s?<end_of_turn>
-<start_of_turn>model
-"""
+        few_shots_messages_6_hops = [
+            {"role": "system", "content": f"Possible relationships: [{options}]"},
+            {"role": "user", "content": "Story: [Seth] and his grandmother [Mary] went to the science museum. They both had fun, and learned some things, too. [Arthur] enjoys going fishing with his brother. His name is [Warren]. [Seth] and his brother [Warren] always played pranks on each other [Warren] was disappointed that his father, [Alvin], would n't be at the play to see him perform. [Warren] took his son [Alvin] out to play gold later that night. [Warren] played chess with his brother [Arthur].\nCRITICAL TASK: State the family relationship. Output EXACTLY ONE WORD from the list above. Mary is Warren's?"},
+            {"role": "assistant", "content": "grandmother"},
+            {"role": "user", "content": "Story: [Ross] went to his brother [Michael]'s Birthday party [Ronald]'s aunt [Erica] likes to drink a little bit too much wine at family gatherings. [Patrick] asked his brother [Ross] if he would come help him fix his car next weekend. [Erica] was mad at her son, [Michael]. She found he'd been stealing from her purse. [Robert] would n't let his son [James] go to the park by himself. [James]'s brother [Ronald] offered to go with him.\nCRITICAL TASK: State the family relationship. Output EXACTLY ONE WORD from the list above. Patrick is Robert's?"},
+            {"role": "assistant", "content": "nephew"},
+            {"role": "user", "content": "Story: [Patrick]'s father, [Joseph], went bowling with his sister, [Katherine]. [Katherine] and her son [Ronald] went out to lunch together yesterday. [Alfredo] went to the Farmer's market with his mother [Erica] and his brother [Patrick]. [Ronald] went to the game with his sister [Charlsie].\nCRITICAL TASK: State the family relationship. Output EXACTLY ONE WORD from the list above. Charlsie is Erica's?"},
+            {"role": "assistant", "content": "niece"},
+            {"role": "user", "content": f"Story: {story}\nCRITICAL TASK: State the family relationship. Output EXACTLY ONE WORD from the list above. {name2} is {name1}'s?"}
+        ]
         
-        few_shots_prompt_low_hops = f"""<start_of_turn>system
-Possible relationships: [{options}]<end_of_turn>
-<start_of_turn>user
-Story: [Theresa] is very proud of her son. His name is [Tony]. [Wayne] took his sister [Theresa] out to dinner for her birthday.
-CRITICAL TASK: State the family relationship. Output EXACTLY ONE WORD from the list above. Wayne is Tony's?<end_of_turn>
-<start_of_turn>model
-uncle<end_of_turn>
-<start_of_turn>user
-Story: [Katherine] had a daughter named [Charlsie]. [Bonnie]'s son, [William], went to have lunch with her sister, [Katherine]. [Robert] and his wife [Katherine] went to see a movie. [Katherine]'s daughter, [Jon], came with them. [Charlsie] went to the store with her sister [Jon]
-CRITICAL TASK: State the family relationship. Output EXACTLY ONE WORD from the list above. William is Robert's?<end_of_turn>
-<start_of_turn>model
-nephew<end_of_turn>
-<start_of_turn>user
-Story: [Stanley] and his sister [Rita] bought a painting for [Stanley]'s father [Steve]. [Steve]'s brother [James] said it was an ugly painting. [Rita] went to her aunt [Patrice]'s house for dinner. [Patrice] made meatloaf, and it was delicious. [Kathleen] bought her mother, [Ellen], a puppy for her birthday. [Sharon] was glad to see her father, [James], at her dance recital. [Kathleen], who is the sister of [Mabel], is a lovely girl. [Ellen] had picked her daughter [Sharon] out the cutest new dress to wear on her birthday. [Mabel] went to the store with her sister [Kathleen] [Ellen] had picked her daughter [Kathleen] out the cutest new dress to wear on her birthday.
-CRITICAL TASK: State the family relationship. Output EXACTLY ONE WORD from the list above. Patrice is Ellen's?<end_of_turn>
-<start_of_turn>model
-sister<end_of_turn>
-<start_of_turn>user
-Story: {story}
-CRITICAL TASK: State the family relationship. Output EXACTLY ONE WORD from the list above. {name2} is {name1}'s?<end_of_turn>
-<start_of_turn>model"""
+        few_shots_messages_low_hops = [
+            {"role": "system", "content": f"Possible relationships: [{options}]"},
+            {"role": "user", "content": "Story: [Theresa] is very proud of her son. His name is [Tony]. [Wayne] took his sister [Theresa] out to dinner for her birthday.\nCRITICAL TASK: State the family relationship. Output EXACTLY ONE WORD from the list above. Wayne is Tony's?"},
+            {"role": "assistant", "content": "uncle"},
+            {"role": "user", "content": "Story: [Katherine] had a daughter named [Charlsie]. [Bonnie]'s son, [William], went to have lunch with her sister, [Katherine]. [Robert] and his wife [Katherine] went to see a movie. [Katherine]'s daughter, [Jon], came with them. [Charlsie] went to the store with her sister [Jon]\nCRITICAL TASK: State the family relationship. Output EXACTLY ONE WORD from the list above. William is Robert's?"},
+            {"role": "assistant", "content": "nephew"},
+            {"role": "user", "content": "Story: [Stanley] and his sister [Rita] bought a painting for [Stanley]'s father [Steve]. [Steve]'s brother [James] said it was an ugly painting. [Rita] went to her aunt [Patrice]'s house for dinner. [Patrice] made meatloaf, and it was delicious. [Kathleen] bought her mother, [Ellen], a puppy for her birthday. [Sharon] was glad to see her father, [James], at her dance recital. [Kathleen], who is the sister of [Mabel], is a lovely girl. [Ellen] had picked her daughter [Sharon] out the cutest new dress to wear on her birthday. [Mabel] went to the store with her sister [Kathleen] [Ellen] had picked her daughter [Kathleen] out the cutest new dress to wear on her birthday.\nCRITICAL TASK: State the family relationship. Output EXACTLY ONE WORD from the list above. Patrice is Ellen's?"},
+            {"role": "assistant", "content": "sister"},
+            {"role": "user", "content": f"Story: {story}\nCRITICAL TASK: State the family relationship. Output EXACTLY ONE WORD from the list above. {name2} is {name1}'s?"}
+        ]
 
-        if subset_number >1 and subset_number <5:
-            prompt = few_shots_prompt_low_hops
+        if subset_number > 1 and subset_number < 5:
+            prompt = few_shots_messages_low_hops
         else:
-            prompt = few_shots_prompt_6_hops
+            prompt = few_shots_messages_6_hops
         
         return prompt
     

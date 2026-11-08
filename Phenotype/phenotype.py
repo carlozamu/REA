@@ -61,27 +61,25 @@ class Phenotype:
 
         # 3. Execution Loop
         for node, parent_ids in execution_order:
-            context_parts = [f"<start_of_turn>system\n{problem}<end_of_turn>\n"]
+            messages = [{"role": "system", "content": problem}]
             
             if parent_ids:
                 for pid in parent_ids:
                     # 'pid' is an innovation_number. We now correctly check trait_answers.
                     if pid in trait_answers:
                         parent_instructions, parent_answer = trait_answers[pid]
-                        parent_turn = f"<start_of_turn>user\n{parent_instructions}<end_of_turn>\n<start_of_turn>model\n{parent_answer}<end_of_turn>\n"
-                        context_parts.append(parent_turn)
+                        messages.append({"role": "user", "content": parent_instructions})
+                        messages.append({"role": "assistant", "content": parent_answer})
                      
-            context_parts.append(f"<start_of_turn>user\n{node.instruction}<end_of_turn>\n<start_of_turn>model\n") # Leave model turn open for answer
-
-            full_context = "".join(context_parts)
+            messages.append({"role": "user", "content": node.instruction})
             
             # B. Execute (Transient)
             trait = Trait(node, self.llm)
             # Fix: renamed 'time' to 'duration' to avoid shadowing module
             last = False
             if node.innovation_number == self.genome.end_node_innovation_number:
-                last= True
-            in_t, out_t, duration, answer = await trait.execute(full_context, last)
+                last = True
+            in_t, out_t, duration, answer = await trait.execute(messages, last)
             last = False
             
             # C. Store Result
