@@ -1,0 +1,1262 @@
+[
+    {
+        "question": "Story:\nS is placed at the upper left of A. A is on the lower right of D. A is over there with B below. K is to the top-left of N. W is to the bottom left of S. I is sitting at the upper right position to W.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent A and agent W, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent W to the agent A?",
+        "answer": "left",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "S is placed at the upper left of A. A is on the lower right of D. A is over there with B below. K is to the top-left of N. W is to the bottom left of S. I is sitting at the upper right position to W.",
+            "query": "What is the relation of the agent W to the agent A?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nG and P are both there with the object G is to the left of object P. G is upper right to B. N is at the lower side of V. V is at the bottom of H vertically. V is at a 45 degree angle to I, in the upper righthand corner. M is to the right of N horizontally. U is at the 6 o'clock position relative to Y. M is diagonally above G to the left at a 45 degree angle. M is lower right of V.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent I and agent G, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent G to the agent I?",
+        "answer": "lower-right",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "G and P are both there with the object G is to the left of object P. G is upper right to B. N is at the lower side of V. V is at the bottom of H vertically. V is at a 45 degree angle to I, in the upper righthand corner. M is to the right of N horizontally. U is at the 6 o'clock position relative to Y. M is diagonally above G to the left at a 45 degree angle. M is lower right of V.",
+            "query": "What is the relation of the agent G to the agent I?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nI and S are side by side with S at the bottom and I on the top. S is positioned right to N. V is positioned in the lower right corner of Y. V and N are both there with the object N below the object V. D is on the same horizontal plane directly right to O. S is over there with D above. O presents left to I. L and W are next to each other with W at the bottom L on the top.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent N and agent V, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent V to the agent N?",
+        "answer": "above",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "I and S are side by side with S at the bottom and I on the top. S is positioned right to N. V is positioned in the lower right corner of Y. V and N are both there with the object N below the object V. D is on the same horizontal plane directly right to O. S is over there with D above. O presents left to I. L and W are next to each other with W at the bottom L on the top.",
+            "query": "What is the relation of the agent V to the agent N?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nX is on the left side and above O. W is below N at 4 o'clock. K and O are parallel, and K on the left of O. X is below B at 4 o'clock. S is at a 45 degree angle to X, in the upper lefthand corner. E is directly north east of K. X is on the same horizontal plane directly left to Q. Q and O are next to each other with Q on the top and O at the bottom.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent S and agent K, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent K to the agent S?",
+        "answer": "lower-right",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "X is on the left side and above O. W is below N at 4 o'clock. K and O are parallel, and K on the left of O. X is below B at 4 o'clock. S is at a 45 degree angle to X, in the upper lefthand corner. E is directly north east of K. X is on the same horizontal plane directly left to Q. Q and O are next to each other with Q on the top and O at the bottom.",
+            "query": "What is the relation of the agent K to the agent S?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nQ and E are both there with the object E below the object Q. M is over there and K is on the left. K is positioned above S. U is above T at 2 o'clock. S is above E with a small gap between them. B is above and to the left of E. Q is directly below K. Q is diagonally above D to the left at a 45 degree angle.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent M and agent Q, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent Q to the agent M?",
+        "answer": "lower-left",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "Q and E are both there with the object E below the object Q. M is over there and K is on the left. K is positioned above S. U is above T at 2 o'clock. S is above E with a small gap between them. B is above and to the left of E. Q is directly below K. Q is diagonally above D to the left at a 45 degree angle.",
+            "query": "What is the relation of the agent Q to the agent M?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nThe object W is upper and slightly to the right of the object F. W is on the same vertical plane directly above X. D is positioned down and to the left of K. H is to the bottom left of O. W is on the right side to K. E is placed at the bottom of D. F is over there and A is on the left of it. E is placed on the top of A.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent K and agent D, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent D to the agent K?",
+        "answer": "lower-left",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "The object W is upper and slightly to the right of the object F. W is on the same vertical plane directly above X. D is positioned down and to the left of K. H is to the bottom left of O. W is on the right side to K. E is placed at the bottom of D. F is over there and A is on the left of it. E is placed on the top of A.",
+            "query": "What is the relation of the agent D to the agent K?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nR and Y are side by side with Y at the bottom and R on the top. U is on the same vertical plane directly above X. P and Y are next to each other with Y on the right and P on the left. R is at the bottom of O and is on the same vertical plane. G presents upper left to M. R is sitting in the left direction of X. I is to the top-right of P. A and U are in a vertical line with A on top. N is over there and Y is on the right of it. The objects A and O are over there. The object A is above and slightly to the right of the object O.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent O and agent P, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent P to the agent O?",
+        "answer": "lower-left",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "R and Y are side by side with Y at the bottom and R on the top. U is on the same vertical plane directly above X. P and Y are next to each other with Y on the right and P on the left. R is at the bottom of O and is on the same vertical plane. G presents upper left to M. R is sitting in the left direction of X. I is to the top-right of P. A and U are in a vertical line with A on top. N is over there and Y is on the right of it. The objects A and O are over there. The object A is above and slightly to the right of the object O.",
+            "query": "What is the relation of the agent P to the agent O?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nB is directly above F. B presents lower left to A. K is sitting at the upper left position to N. H is on the upper right of E. N is to the right and above F at an angle of about 45 degrees. J is to the bottom-left of A. K is at the 12 o'clock position relative to S. S and N are horizontal and S is to the left of N.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent A and agent F, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent F to the agent A?",
+        "answer": "lower-left",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "B is directly above F. B presents lower left to A. K is sitting at the upper left position to N. H is on the upper right of E. N is to the right and above F at an angle of about 45 degrees. J is to the bottom-left of A. K is at the 12 o'clock position relative to S. S and N are horizontal and S is to the left of N.",
+            "query": "What is the relation of the agent F to the agent A?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nE is to the bottom-left of Z. W and F are parallel, and W is under F. Q is to the bottom right of F. G and P are parallel, and G is on top of P. G is to the bottom-left of K. Q is placed at the upper right of P. N is on the same vertical plane directly above Q. Q is below D with a small gap between them. D is on the right and F is on the left.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent W and agent G, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent G to the agent W?",
+        "answer": "overlap",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "E is to the bottom-left of Z. W and F are parallel, and W is under F. Q is to the bottom right of F. G and P are parallel, and G is on top of P. G is to the bottom-left of K. Q is placed at the upper right of P. N is on the same vertical plane directly above Q. Q is below D with a small gap between them. D is on the right and F is on the left.",
+            "query": "What is the relation of the agent G to the agent W?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nQ is there and Y is at the 5 position of a clock face. E is sitting at the 9:00 position of I. M and H are parallel, and H is below M. E and W are parallel, and E on the left of W. M is placed in the right direction of I. L is on the same horizontal plane directly left to H. L is on the upper right of G. W is slightly off center to the top left and H is slightly off center to the bottom right. D is positioned in the lower left corner of W.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent W and agent G, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent G to the agent W?",
+        "answer": "lower-left",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "Q is there and Y is at the 5 position of a clock face. E is sitting at the 9:00 position of I. M and H are parallel, and H is below M. E and W are parallel, and E on the left of W. M is placed in the right direction of I. L is on the same horizontal plane directly left to H. L is on the upper right of G. W is slightly off center to the top left and H is slightly off center to the bottom right. D is positioned in the lower left corner of W.",
+            "query": "What is the relation of the agent G to the agent W?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nG is at a 45 degree angle to R, in the lower lefthand corner. M is lower right of L. C is below S with a small gap between them. R and P are in a horizontal line with P on the right. L is sitting at the lower position to P. P is above T with a small gap between them. P is over there and E is at the bottom of it. J and E are parallel, and J is to the left of E. T is on the right and J is on the left.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent L and agent T, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent T to the agent L?",
+        "answer": "overlap",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "G is at a 45 degree angle to R, in the lower lefthand corner. M is lower right of L. C is below S with a small gap between them. R and P are in a horizontal line with P on the right. L is sitting at the lower position to P. P is above T with a small gap between them. P is over there and E is at the bottom of it. J and E are parallel, and J is to the left of E. T is on the right and J is on the left.",
+            "query": "What is the relation of the agent T to the agent L?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nC is directly north east of I. V is to the top-left of L. I is at H's 3 o'clock. T is over there and C is on the right. T and I are next to each other with T on the top and I at the bottom. N is above and to the right of V. P and B are side by side with P on the top and B at the bottom. C is to the bottom-left of N.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent N and agent H, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent H to the agent N?",
+        "answer": "lower-left",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "C is directly north east of I. V is to the top-left of L. I is at H's 3 o'clock. T is over there and C is on the right. T and I are next to each other with T on the top and I at the bottom. N is above and to the right of V. P and B are side by side with P on the top and B at the bottom. C is to the bottom-left of N.",
+            "query": "What is the relation of the agent H to the agent N?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nY is diagonally right and below N. Q is positioned up and to the right of T. T is over there with U above. The object J is positioned directly below the object H. The object labeled E is positioned to the right of the object labeled U. E presents below N. M and Z are parallel, and M on the right of Z. Q and Y are both there with the object Q is to the right of object Y. H and N are horizontal and H is to the right of N.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent H and agent Y, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent Y to the agent H?",
+        "answer": "lower-right",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "Y is diagonally right and below N. Q is positioned up and to the right of T. T is over there with U above. The object J is positioned directly below the object H. The object labeled E is positioned to the right of the object labeled U. E presents below N. M and Z are parallel, and M on the right of Z. Q and Y are both there with the object Q is to the right of object Y. H and N are horizontal and H is to the right of N.",
+            "query": "What is the relation of the agent Y to the agent H?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nU and Z are vertical and U is below Z. L and R are both there with the object L is to the right of object R. R is diagonally to the upper right of T. Q is over there and T is on the left of it. I is north east of H. L is above X at 10 o'clock. U is on the right and T is on the left. Z is diagonally right and above T.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent R and agent L, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent L to the agent R?",
+        "answer": "left",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "U and Z are vertical and U is below Z. L and R are both there with the object L is to the right of object R. R is diagonally to the upper right of T. Q is over there and T is on the left of it. I is north east of H. L is above X at 10 o'clock. U is on the right and T is on the left. Z is diagonally right and above T.",
+            "query": "What is the relation of the agent L to the agent R?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nE is placed on the top of R. M is to the left of X and is on the same horizontal plane. V is positioned below D and to the left. M is diagonally to the upper left of W. W is there and Z is at the 5 position of a clock face. M is at V's 12 o'clock. X is to the left of E horizontally. R and Z are parallel, and R is on top of Z. U and K are next to each other with K on the right and U on the left. C is below and to the left of V.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent V and agent W, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent W to the agent V?",
+        "answer": "right",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "E is placed on the top of R. M is to the left of X and is on the same horizontal plane. V is positioned below D and to the left. M is diagonally to the upper left of W. W is there and Z is at the 5 position of a clock face. M is at V's 12 o'clock. X is to the left of E horizontally. R and Z are parallel, and R is on top of Z. U and K are next to each other with K on the right and U on the left. C is below and to the left of V.",
+            "query": "What is the relation of the agent W to the agent V?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nJ is over there with D below. T and E are vertical and T is above E. N is sitting at the 3:00 position to U. W is above L and to the right of L. J is at a 45 degree angle to U, in the upper righthand corner. P is placed in the right direction of T. J is placed in the right direction of P. U and E are side by side with U to the right and E to the left.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent U and agent D, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent D to the agent U?",
+        "answer": "right",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "J is over there with D below. T and E are vertical and T is above E. N is sitting at the 3:00 position to U. W is above L and to the right of L. J is at a 45 degree angle to U, in the upper righthand corner. P is placed in the right direction of T. J is placed in the right direction of P. U and E are side by side with U to the right and E to the left.",
+            "query": "What is the relation of the agent D to the agent U?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nG is sitting in the right direction of F. L is on the lower left of N. P is over there and N is on the right of it. H and D are in a vertical line with H on top. Q is at the 9 o'clock position relative to N. C and D are in a vertical line with D below C. N is to the bottom-left of I. H is over there and Q is on the right of it. I is at the 3 o'clock position relative to E. L presents right to D.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent L and agent I, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent I to the agent L?",
+        "answer": "upper-right",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "G is sitting in the right direction of F. L is on the lower left of N. P is over there and N is on the right of it. H and D are in a vertical line with H on top. Q is at the 9 o'clock position relative to N. C and D are in a vertical line with D below C. N is to the bottom-left of I. H is over there and Q is on the right of it. I is at the 3 o'clock position relative to E. L presents right to D.",
+            "query": "What is the relation of the agent I to the agent L?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nV is sitting at the upper left position to L. E is sitting at the top position to G. L is at T's 6 o'clock. N is positioned in the lower right corner of S. E is over there and L is on the right of it. N is over there and G is on the left of it. Y is positioned above O and to the right. If T is the center of a clock face, S is located between 7 and 8.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent T and agent L, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent L to the agent T?",
+        "answer": "below",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "V is sitting at the upper left position to L. E is sitting at the top position to G. L is at T's 6 o'clock. N is positioned in the lower right corner of S. E is over there and L is on the right of it. N is over there and G is on the left of it. Y is positioned above O and to the right. If T is the center of a clock face, S is located between 7 and 8.",
+            "query": "What is the relation of the agent L to the agent T?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nH is over there with Y above. W is directly below K. A is above and to the left of W. O is at the 3 o'clock position relative to H. Y presents upper right to A. S presents lower right to R. Y is sitting at the top position to K. C is over there and W is directly above it.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent O and agent A, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent A to the agent O?",
+        "answer": "left",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "H is over there with Y above. W is directly below K. A is above and to the left of W. O is at the 3 o'clock position relative to H. Y presents upper right to A. S presents lower right to R. Y is sitting at the top position to K. C is over there and W is directly above it.",
+            "query": "What is the relation of the agent A to the agent O?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nA is above C at 10 o'clock. I is north east of U. I and T are next to each other with I on the left and T on the right. J and O are side by side with J to the left and O to the right. Z is diagonally left and above Z. I is positioned left to O. J is over there and W is on the right. C is over W. T is over there with C above.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent J and agent O, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent O to the agent J?",
+        "answer": "right",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "A is above C at 10 o'clock. I is north east of U. I and T are next to each other with I on the left and T on the right. J and O are side by side with J to the left and O to the right. Z is diagonally left and above Z. I is positioned left to O. J is over there and W is on the right. C is over W. T is over there with C above.",
+            "query": "What is the relation of the agent O to the agent J?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nG is sitting at the lower position to R. G and J are side by side with G to the right and J to the left. Object C is above object K and to the right of it, too. R is at the lower side of V. G is there and C is at the 2 position of a clock face. I is directly above G. V is sitting at the top position to I. The object Y and N are there. The object N is above and slightly to the left of the object Y. V is to the bottom left of W.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent J and agent W, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent W to the agent J?",
+        "answer": "upper-right",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "G is sitting at the lower position to R. G and J are side by side with G to the right and J to the left. Object C is above object K and to the right of it, too. R is at the lower side of V. G is there and C is at the 2 position of a clock face. I is directly above G. V is sitting at the top position to I. The object Y and N are there. The object N is above and slightly to the left of the object Y. V is to the bottom left of W.",
+            "query": "What is the relation of the agent W to the agent J?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nT is there and V is at the 5 position of a clock face. S and V are parallel, and S is to the right of V. The object K is lower and slightly to the right of the object S. The object M is positioned directly above the object F. F presents lower right to O. O and M are both there with the object O is to the left of object M. A and W are parallel, and A on the right of W. L presents upper right to V. L is at the 3 o'clock position relative to F.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent S and agent L, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent L to the agent S?",
+        "answer": "upper-right",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "T is there and V is at the 5 position of a clock face. S and V are parallel, and S is to the right of V. The object K is lower and slightly to the right of the object S. The object M is positioned directly above the object F. F presents lower right to O. O and M are both there with the object O is to the left of object M. A and W are parallel, and A on the right of W. L presents upper right to V. L is at the 3 o'clock position relative to F.",
+            "query": "What is the relation of the agent L to the agent S?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nJ is to the right and above K at an angle of about 45 degrees. The object Y is positioned above and to the left of object J. W is directly above K. D is slightly off center to the top left and Y is slightly off center to the bottom right. L and N are parallel, and L is over N. K is below U with a small gap between them. V is positioned above W. J and U are horizontal and J is to the right of U.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent D and agent Y, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent Y to the agent D?",
+        "answer": "lower-right",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "J is to the right and above K at an angle of about 45 degrees. The object Y is positioned above and to the left of object J. W is directly above K. D is slightly off center to the top left and Y is slightly off center to the bottom right. L and N are parallel, and L is over N. K is below U with a small gap between them. V is positioned above W. J and U are horizontal and J is to the right of U.",
+            "query": "What is the relation of the agent Y to the agent D?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nH is below Y at 7 o'clock. F is at the 12 o'clock position relative to Q. S and U are parallel, and S on the left of U. G and W are in a horizontal line with G on the left. S is diagonally right and above G. W is to the bottom left of L. Q is sitting at the 12:00 position to A. G and K are next to each other with K on the right and G on the left. K is to the left of X with a small gap between them. F is positioned up and to the right of U. X is to the left of A horizontally.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent W and agent S, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent S to the agent W?",
+        "answer": "above",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "H is below Y at 7 o'clock. F is at the 12 o'clock position relative to Q. S and U are parallel, and S on the left of U. G and W are in a horizontal line with G on the left. S is diagonally right and above G. W is to the bottom left of L. Q is sitting at the 12:00 position to A. G and K are next to each other with K on the right and G on the left. K is to the left of X with a small gap between them. F is positioned up and to the right of U. X is to the left of A horizontally.",
+            "query": "What is the relation of the agent S to the agent W?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nQ is positioned in the top left corner of L. E is over there with C above. E is over there with X below. M is there and P is at the 10 position of a clock face. Y and E are in a horizontal line with E on the right. N is placed at the upper left of E. N is at the 12 o'clock position relative to Y. If P is the center of a clock face, C is located between 4 and 5.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent P and agent M, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent M to the agent P?",
+        "answer": "lower-right",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "Q is positioned in the top left corner of L. E is over there with C above. E is over there with X below. M is there and P is at the 10 position of a clock face. Y and E are in a horizontal line with E on the right. N is placed at the upper left of E. N is at the 12 o'clock position relative to Y. If P is the center of a clock face, C is located between 4 and 5.",
+            "query": "What is the relation of the agent M to the agent P?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nA is on the top of H and is on the same vertical plane. R is to the left of W and below W at approximately a 45 degree angle. H is to the top of Y vertically. W is sitting in the left direction of Q. P is to the bottom-right of Q. The object I is positioned above and to the left of object G. Y is directly south west of Q.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent Y and agent R, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent R to the agent Y?",
+        "answer": "left",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "A is on the top of H and is on the same vertical plane. R is to the left of W and below W at approximately a 45 degree angle. H is to the top of Y vertically. W is sitting in the left direction of Q. P is to the bottom-right of Q. The object I is positioned above and to the left of object G. Y is directly south west of Q.",
+            "query": "What is the relation of the agent R to the agent Y?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nN is below and to the left of U. C and R are side by side with C to the right and R to the left. T is directly below S. F is on the left and T is on the right. F presents lower left to U. U is to the left of H horizontally.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent F and agent T, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent T to the agent F?",
+        "answer": "right",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "N is below and to the left of U. C and R are side by side with C to the right and R to the left. T is directly below S. F is on the left and T is on the right. F presents lower left to U. U is to the left of H horizontally.",
+            "query": "What is the relation of the agent T to the agent F?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nE is directly north west of L. K is above E at 10 o'clock. K is over there and Q is on the left. L is over there and N is on the right of it. I is upper left of K. Q and I are vertical and Q is below I. K is to the right of F and is on the same horizontal plane. G is north east of C. N is diagonally to the bottom right of J.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent E and agent L, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent L to the agent E?",
+        "answer": "lower-right",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "E is directly north west of L. K is above E at 10 o'clock. K is over there and Q is on the left. L is over there and N is on the right of it. I is upper left of K. Q and I are vertical and Q is below I. K is to the right of F and is on the same horizontal plane. G is north east of C. N is diagonally to the bottom right of J.",
+            "query": "What is the relation of the agent L to the agent E?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nC and I are parallel, and C is on top of I. The object C is positioned below and to the left of the object Q. G is positioned below J and to the left. T is sitting at the top position to D. X is over there with Q above. E is positioned in the front right corner of J. J is at the 12 o'clock position relative to W. C and X are next to each other with C on the left and X on the right. G is diagonally above C to the left at a 45 degree angle.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent W and agent J, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent J to the agent W?",
+        "answer": "above",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "C and I are parallel, and C is on top of I. The object C is positioned below and to the left of the object Q. G is positioned below J and to the left. T is sitting at the top position to D. X is over there with Q above. E is positioned in the front right corner of J. J is at the 12 o'clock position relative to W. C and X are next to each other with C on the left and X on the right. G is diagonally above C to the left at a 45 degree angle.",
+            "query": "What is the relation of the agent J to the agent W?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nC is sitting at the 9:00 position of H. X is placed in the right direction of L. X presents upper right to C. M is sitting in the right direction of S. M is below I at 7 o'clock. K and Y are parallel, and K is to the left of Y. L is positioned above M and to the right. H is on the same vertical plane directly below X.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent M and agent I, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent I to the agent M?",
+        "answer": "upper-right",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "C is sitting at the 9:00 position of H. X is placed in the right direction of L. X presents upper right to C. M is sitting in the right direction of S. M is below I at 7 o'clock. K and Y are parallel, and K is to the left of Y. L is positioned above M and to the right. H is on the same vertical plane directly below X.",
+            "query": "What is the relation of the agent I to the agent M?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nJ is to the left of G and is on the same horizontal plane. I and Q are side by side with I to the right and Q to the left. G is north west of Z. R and J are side by side with J at the bottom and R on the top. X and F are in a vertical line with F below X. R is over there and E is on the top of it. I is at a 45 degree angle to A, in the upper righthand corner. Q is over there and E is on the left of it. G is on the same vertical plane directly below A. L is above I at 2 o'clock.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent G and agent A, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent A to the agent G?",
+        "answer": "above",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "J is to the left of G and is on the same horizontal plane. I and Q are side by side with I to the right and Q to the left. G is north west of Z. R and J are side by side with J at the bottom and R on the top. X and F are in a vertical line with F below X. R is over there and E is on the top of it. I is at a 45 degree angle to A, in the upper righthand corner. Q is over there and E is on the left of it. G is on the same vertical plane directly below A. L is above I at 2 o'clock.",
+            "query": "What is the relation of the agent A to the agent G?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nC and N are next to each other with C on the top and N at the bottom. U and E are horizontal and U is to the right of E. R is above Z with a small gap between them. J is positioned above I and to the left. R is under Q. P and C are in a horizontal line with C on the right. N is sitting in the right direction of Z. The object labeled E is positioned to the right of the object labeled N. Q and P are next to each other with Q on the top and P at the bottom.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent E and agent P, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent P to the agent E?",
+        "answer": "upper-left",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "C and N are next to each other with C on the top and N at the bottom. U and E are horizontal and U is to the right of E. R is above Z with a small gap between them. J is positioned above I and to the left. R is under Q. P and C are in a horizontal line with C on the right. N is sitting in the right direction of Z. The object labeled E is positioned to the right of the object labeled N. Q and P are next to each other with Q on the top and P at the bottom.",
+            "query": "What is the relation of the agent P to the agent E?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nA is diagonally right and below G. P is diagonally left and above P. K presents upper right to Q. E is below K. Q is north west of C. C is at T's 6 o'clock. The object labeled H is positioned to the left of the object labeled A. Q is at H’s 9 o'clock. A is positioned right to T.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent K and agent T, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent T to the agent K?",
+        "answer": "below",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "A is diagonally right and below G. P is diagonally left and above P. K presents upper right to Q. E is below K. Q is north west of C. C is at T's 6 o'clock. The object labeled H is positioned to the left of the object labeled A. Q is at H’s 9 o'clock. A is positioned right to T.",
+            "query": "What is the relation of the agent T to the agent K?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nL is positioned above C. H is slightly off center to the top left and D is slightly off center to the bottom right. D is above C at 10 o'clock. F and V are parallel, and V is below F. The object G is positioned below and to the left of the object R. K is over there and I is on the right. F presents below H. C is below and to the right of J. K is on the right and H is on the left. I is placed at the bottom of L.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent V and agent F, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent F to the agent V?",
+        "answer": "above",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "L is positioned above C. H is slightly off center to the top left and D is slightly off center to the bottom right. D is above C at 10 o'clock. F and V are parallel, and V is below F. The object G is positioned below and to the left of the object R. K is over there and I is on the right. F presents below H. C is below and to the right of J. K is on the right and H is on the left. I is placed at the bottom of L.",
+            "query": "What is the relation of the agent F to the agent V?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nM is diagonally to the upper left of U. O and M are parallel, and O is to the right of M. P is placed at the lower right of F. T presents lower right to W. C and M are parallel, and C on the right of M. T is on the lower left of Z. T is over there and G is directly above it. O and Z are parallel, and Z is below O. Q and G are next to each other with Q on the top and G at the bottom. Q is on the same horizontal plane directly left to C.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent Z and agent U, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent U to the agent Z?",
+        "answer": "right",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "M is diagonally to the upper left of U. O and M are parallel, and O is to the right of M. P is placed at the lower right of F. T presents lower right to W. C and M are parallel, and C on the right of M. T is on the lower left of Z. T is over there and G is directly above it. O and Z are parallel, and Z is below O. Q and G are next to each other with Q on the top and G at the bottom. Q is on the same horizontal plane directly left to C.",
+            "query": "What is the relation of the agent U to the agent Z?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nZ is to the right of E horizontally. M is on the same horizontal plane directly left to Z. N is positioned above A. The object X is lower and slightly to the right of the object N. L is to the top-right of T. E is placed on the top of B. Z is on the upper right of B. B is to the left of W. B is directly above X.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent N and agent A, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent A to the agent N?",
+        "answer": "below",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "Z is to the right of E horizontally. M is on the same horizontal plane directly left to Z. N is positioned above A. The object X is lower and slightly to the right of the object N. L is to the top-right of T. E is placed on the top of B. Z is on the upper right of B. B is to the left of W. B is directly above X.",
+            "query": "What is the relation of the agent A to the agent N?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nI is to the left of B. Q is to the right of O. Y is positioned in the top left corner of M. O and B are in a horizontal line with O on the left. Q is diagonally below Z to the left at a 45 degree angle. J is sitting in the left direction of V. J and I are parallel, and J on the left of I.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent B and agent J, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent J to the agent B?",
+        "answer": "left",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "I is to the left of B. Q is to the right of O. Y is positioned in the top left corner of M. O and B are in a horizontal line with O on the left. Q is diagonally below Z to the left at a 45 degree angle. J is sitting in the left direction of V. J and I are parallel, and J on the left of I.",
+            "query": "What is the relation of the agent J to the agent B?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nV is positioned above T. J presents upper right to V. X is directly above T. V is placed at the lower left of L. J is above I and to the right of I. U and J are in a horizontal line with U on the left. If M is the center of a clock face, P is located between 4 and 5. X is at the lower side of U. The object labeled T is positioned to the right of the object labeled B.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent I and agent V, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent V to the agent I?",
+        "answer": "overlap",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "V is positioned above T. J presents upper right to V. X is directly above T. V is placed at the lower left of L. J is above I and to the right of I. U and J are in a horizontal line with U on the left. If M is the center of a clock face, P is located between 4 and 5. X is at the lower side of U. The object labeled T is positioned to the right of the object labeled B.",
+            "query": "What is the relation of the agent V to the agent I?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nD is on the lower right of F. J is positioned right to F. F is to the left of B horizontally. X is above K. J is on the top and Q is at the bottom. G is to the top-left of Q. B is diagonally right and below C.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent Q and agent F, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent F to the agent Q?",
+        "answer": "upper-left",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "D is on the lower right of F. J is positioned right to F. F is to the left of B horizontally. X is above K. J is on the top and Q is at the bottom. G is to the top-left of Q. B is diagonally right and below C.",
+            "query": "What is the relation of the agent F to the agent Q?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nF is at the bottom of R vertically. I is above M at 2 o'clock. I is over there and L is directly below it. L and V are parallel, and L is on top of V. X is diagonally below P to the right at a 45 degree angle. The objects X and I are over there. The object X is lower and slightly to the left of the object I. V is placed at the upper left of O. Object V is below object M and to the right of it, too.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent M and agent X, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent X to the agent M?",
+        "answer": "overlap",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "F is at the bottom of R vertically. I is above M at 2 o'clock. I is over there and L is directly below it. L and V are parallel, and L is on top of V. X is diagonally below P to the right at a 45 degree angle. The objects X and I are over there. The object X is lower and slightly to the left of the object I. V is placed at the upper left of O. Object V is below object M and to the right of it, too.",
+            "query": "What is the relation of the agent X to the agent M?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nK is on the right side and top of Z. C is over there and D is on the right. D is below F and to the right of F. R is on the left side and above Q. R and P are next to each other with R on the left and P on the right. F is to the upper left of Q. Q presents below P. Q is placed in the right direction of A.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent F and agent D, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent D to the agent F?",
+        "answer": "lower-right",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "K is on the right side and top of Z. C is over there and D is on the right. D is below F and to the right of F. R is on the left side and above Q. R and P are next to each other with R on the left and P on the right. F is to the upper left of Q. Q presents below P. Q is placed in the right direction of A.",
+            "query": "What is the relation of the agent D to the agent F?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nE is positioned up and to the right of T. W and T are next to each other with T at the bottom W on the top. E and Y are side by side with E on the top and Y at the bottom. M and P are in a vertical line with P below M. Q presents lower left to X. W is sitting at the 12:00 position to M. B is at the bottom of E vertically.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent Y and agent E, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent E to the agent Y?",
+        "answer": "above",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "E is positioned up and to the right of T. W and T are next to each other with T at the bottom W on the top. E and Y are side by side with E on the top and Y at the bottom. M and P are in a vertical line with P below M. Q presents lower left to X. W is sitting at the 12:00 position to M. B is at the bottom of E vertically.",
+            "query": "What is the relation of the agent E to the agent Y?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nL is to the top of V vertically. T is below and to the right of K. The object N is upper and slightly to the left of the object J. B is at the 12 o'clock position relative to J. N is to the left of B with a small gap between them. J is over there with H above. The object labeled C is positioned to the left of the object labeled N. T is diagonally right and above P. C and T are side by side with C on the top and T at the bottom.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent C and agent T, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent T to the agent C?",
+        "answer": "below",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "L is to the top of V vertically. T is below and to the right of K. The object N is upper and slightly to the left of the object J. B is at the 12 o'clock position relative to J. N is to the left of B with a small gap between them. J is over there with H above. The object labeled C is positioned to the left of the object labeled N. T is diagonally right and above P. C and T are side by side with C on the top and T at the bottom.",
+            "query": "What is the relation of the agent T to the agent C?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nV and I are in a horizontal line with I on the right. O is positioned in the front right corner of Y. M is to the left of V horizontally. T is to the right and above M at an angle of about 45 degrees. E is on the right side to G. A and G are in a horizontal line with G on the right. M is positioned below W and to the left. R is to the right of E with a small gap between them. R is at a 45 degree angle to I, in the lower righthand corner. W is on the left side to A.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent I and agent V, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent V to the agent I?",
+        "answer": "left",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "V and I are in a horizontal line with I on the right. O is positioned in the front right corner of Y. M is to the left of V horizontally. T is to the right and above M at an angle of about 45 degrees. E is on the right side to G. A and G are in a horizontal line with G on the right. M is positioned below W and to the left. R is to the right of E with a small gap between them. R is at a 45 degree angle to I, in the lower righthand corner. W is on the left side to A.",
+            "query": "What is the relation of the agent V to the agent I?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nR is south east of S. V is positioned in the top left corner of U. R is on the left side of and below U. The object B is positioned below and to the right of the object F. R is over there with C above. E is upper left of L. The object W is positioned below and to the right of the object R. L is positioned in the top left corner of V. C is to the left of U and is on the same horizontal plane.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent V and agent L, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent L to the agent V?",
+        "answer": "upper-left",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "R is south east of S. V is positioned in the top left corner of U. R is on the left side of and below U. The object B is positioned below and to the right of the object F. R is over there with C above. E is upper left of L. The object W is positioned below and to the right of the object R. L is positioned in the top left corner of V. C is to the left of U and is on the same horizontal plane.",
+            "query": "What is the relation of the agent L to the agent V?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nY is diagonally below Q to the right at a 45 degree angle. U is at the 6 o'clock position relative to H. S is lower left to Q. C is there and E is at the 10 position of a clock face. K and C are both there with the object K is to the right of object C. H is to the right of Q with a small gap between them. U is placed on the top of C. J is on the right and T is on the left. Y and C are in a vertical line with C below Y.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent Y and agent S, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent S to the agent Y?",
+        "answer": "left",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "Y is diagonally below Q to the right at a 45 degree angle. U is at the 6 o'clock position relative to H. S is lower left to Q. C is there and E is at the 10 position of a clock face. K and C are both there with the object K is to the right of object C. H is to the right of Q with a small gap between them. U is placed on the top of C. J is on the right and T is on the left. Y and C are in a vertical line with C below Y.",
+            "query": "What is the relation of the agent S to the agent Y?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nThe object W is lower and slightly to the right of the object H. The object labeled G is positioned to the right of the object labeled I. W and L are parallel, and W is on top of L. W is to the right of Z horizontally. L is on the top side to A. I and H are horizontal and I is to the right of H. C is positioned left to W. D is to the right of S horizontally. G is on top of Z.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent L and agent H, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent H to the agent L?",
+        "answer": "upper-left",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "The object W is lower and slightly to the right of the object H. The object labeled G is positioned to the right of the object labeled I. W and L are parallel, and W is on top of L. W is to the right of Z horizontally. L is on the top side to A. I and H are horizontal and I is to the right of H. C is positioned left to W. D is to the right of S horizontally. G is on top of Z.",
+            "query": "What is the relation of the agent H to the agent L?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nB and I are both there with the object B is to the left of object I. M is over there and P is on the left of it. The object R is positioned below and to the right of the object A. A is above J. O is on the top side to R. O is at the 3 o'clock position relative to A. F is sitting at the 3:00 position to R. F is diagonally above M to the right at a 45 degree.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent F and agent M, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent M to the agent F?",
+        "answer": "lower-left",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "B and I are both there with the object B is to the left of object I. M is over there and P is on the left of it. The object R is positioned below and to the right of the object A. A is above J. O is on the top side to R. O is at the 3 o'clock position relative to A. F is sitting at the 3:00 position to R. F is diagonally above M to the right at a 45 degree.",
+            "query": "What is the relation of the agent M to the agent F?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nG is positioned below Z and to the right. Z is on the top side to E. N is positioned below E. G and L are vertical and G is above L. K presents right to U. B is placed on the top of N. L is on the right side and below B. S is there and L is at the 10 position of a clock face.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent L and agent G, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent G to the agent L?",
+        "answer": "above",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "G is positioned below Z and to the right. Z is on the top side to E. N is positioned below E. G and L are vertical and G is above L. K presents right to U. B is placed on the top of N. L is on the right side and below B. S is there and L is at the 10 position of a clock face.",
+            "query": "What is the relation of the agent G to the agent L?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nQ and S are parallel, and Q is over S. I and Q are both there with the object I is to the left of object Q. I is positioned left to T. I and C are next to each other with I on the left and C on the right. N is below L and to the right of L. T and J are in a vertical line with T on top. S and G are in a vertical line with S on top. Z is to the right of G. J is over there with G below.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent S and agent C, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent C to the agent S?",
+        "answer": "above",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "Q and S are parallel, and Q is over S. I and Q are both there with the object I is to the left of object Q. I is positioned left to T. I and C are next to each other with I on the left and C on the right. N is below L and to the right of L. T and J are in a vertical line with T on top. S and G are in a vertical line with S on top. Z is to the right of G. J is over there with G below.",
+            "query": "What is the relation of the agent C to the agent S?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nC is above N at 2 o'clock. H is over there and K is directly below it. Q is on the lower right of O. Y presents left to E. U and Y are vertical and U is above Y. K is to the right of E with a small gap between them. The object Q is lower and slightly to the right of the object E. G and E are side by side with G to the right and E to the left. O is at a 45 degree angle to H, in the lower lefthand corner.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent O and agent Q, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent Q to the agent O?",
+        "answer": "lower-right",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "C is above N at 2 o'clock. H is over there and K is directly below it. Q is on the lower right of O. Y presents left to E. U and Y are vertical and U is above Y. K is to the right of E with a small gap between them. The object Q is lower and slightly to the right of the object E. G and E are side by side with G to the right and E to the left. O is at a 45 degree angle to H, in the lower lefthand corner.",
+            "query": "What is the relation of the agent Q to the agent O?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nT is to the bottom-left of Q. X is at the 12 o'clock position relative to E. Z is diagonally to the upper right of G. T and E are both there with the object E below the object T. Y is upper left of N. Object G is below object X and to the left of it, too.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent T and agent G, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent G to the agent T?",
+        "answer": "lower-left",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "T is to the bottom-left of Q. X is at the 12 o'clock position relative to E. Z is diagonally to the upper right of G. T and E are both there with the object E below the object T. Y is upper left of N. Object G is below object X and to the left of it, too.",
+            "query": "What is the relation of the agent G to the agent T?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nU is directly south east of C. A is over C. P is diagonally above C to the left at a 45 degree angle. R is positioned below O and to the left. I and H are in a vertical line with H below I. Object X is above object P and to the right of it, too. P presents left to A. H is on the right and U is on the left.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent U and agent X, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent X to the agent U?",
+        "answer": "upper-left",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "U is directly south east of C. A is over C. P is diagonally above C to the left at a 45 degree angle. R is positioned below O and to the left. I and H are in a vertical line with H below I. Object X is above object P and to the right of it, too. P presents left to A. H is on the right and U is on the left.",
+            "query": "What is the relation of the agent X to the agent U?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nW and Y are side by side with Y at the bottom and W on the top. The object R is positioned directly below the object Y. The objects H and K are over there. The object H is above and slightly to the right of the object K. E is above L. H is positioned above W and to the left. N is to the right of R. The object labeled Y is positioned to the left of the object labeled Q. N is over there and Q is on the top of it. Z and H are both there with the object Z is to the left of object H.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent Q and agent W, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent W to the agent Q?",
+        "answer": "upper-left",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "W and Y are side by side with Y at the bottom and W on the top. The object R is positioned directly below the object Y. The objects H and K are over there. The object H is above and slightly to the right of the object K. E is above L. H is positioned above W and to the left. N is to the right of R. The object labeled Y is positioned to the left of the object labeled Q. N is over there and Q is on the top of it. Z and H are both there with the object Z is to the left of object H.",
+            "query": "What is the relation of the agent W to the agent Q?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nO is at the bottom of T vertically. J is below M with a small gap between them. H and A are vertical and H is below A. If A is the center of a clock face, Z is located between 10 and 11. A is south west of T. A and O are parallel, and A on the left of O. A and B are parallel, and B is below A. W presents upper left to H. W is below G with a small gap between them.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent G and agent H, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent H to the agent G?",
+        "answer": "lower-right",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "O is at the bottom of T vertically. J is below M with a small gap between them. H and A are vertical and H is below A. If A is the center of a clock face, Z is located between 10 and 11. A is south west of T. A and O are parallel, and A on the left of O. A and B are parallel, and B is below A. W presents upper left to H. W is below G with a small gap between them.",
+            "query": "What is the relation of the agent H to the agent G?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nE is above H. I is above F. P and E are side by side with P on the top and E at the bottom. P is at the 6 o'clock position relative to R. R is on the top and I is at the bottom. H is positioned below F. Z is north east of P. The object N is positioned above and to the right of the object H. Q is to the top of S vertically.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent P and agent E, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent E to the agent P?",
+        "answer": "below",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "E is above H. I is above F. P and E are side by side with P on the top and E at the bottom. P is at the 6 o'clock position relative to R. R is on the top and I is at the bottom. H is positioned below F. Z is north east of P. The object N is positioned above and to the right of the object H. Q is to the top of S vertically.",
+            "query": "What is the relation of the agent E to the agent P?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nT is diagonally above U to the right at a 45 degree. P is positioned below A. M is diagonally right and below W. I is on the upper right of F. J is sitting at the top position to U. M is at the 3 o'clock position relative to O. J is over there and K is on the right of it. The object labeled K is positioned to the left of the object labeled O. T is to the left of O horizontally. F and W are parallel, and F is on top of W.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent T and agent M, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent M to the agent T?",
+        "answer": "right",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "T is diagonally above U to the right at a 45 degree. P is positioned below A. M is diagonally right and below W. I is on the upper right of F. J is sitting at the top position to U. M is at the 3 o'clock position relative to O. J is over there and K is on the right of it. The object labeled K is positioned to the left of the object labeled O. T is to the left of O horizontally. F and W are parallel, and F is on top of W.",
+            "query": "What is the relation of the agent M to the agent T?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nW is on the left side of and below Y. D is sitting at the upper left position to M. F is at the lower side of V. W is above L and to the left of L. Q is positioned up and to the right of D. P is positioned in the top left corner of L. The object D is upper and slightly to the left of the object P.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent L and agent D, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent D to the agent L?",
+        "answer": "upper-left",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "W is on the left side of and below Y. D is sitting at the upper left position to M. F is at the lower side of V. W is above L and to the left of L. Q is positioned up and to the right of D. P is positioned in the top left corner of L. The object D is upper and slightly to the left of the object P.",
+            "query": "What is the relation of the agent D to the agent L?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nL and Q are horizontal and L is to the right of Q. M is placed at the bottom of L. C is there and F is at the 5 position of a clock face. J is diagonally above L to the right at a 45 degree. M and Z are parallel, and M on the left of Z. Y is at the 3 o'clock position relative to C. The object F is positioned above and to the right of the object J. F is sitting at the lower right position to U. G is on the lower right of X. B is on the right and Z is on the left. F is at the 12 o'clock position relative to B.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent Q and agent J, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent J to the agent Q?",
+        "answer": "above",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "L and Q are horizontal and L is to the right of Q. M is placed at the bottom of L. C is there and F is at the 5 position of a clock face. J is diagonally above L to the right at a 45 degree. M and Z are parallel, and M on the left of Z. Y is at the 3 o'clock position relative to C. The object F is positioned above and to the right of the object J. F is sitting at the lower right position to U. G is on the lower right of X. B is on the right and Z is on the left. F is at the 12 o'clock position relative to B.",
+            "query": "What is the relation of the agent J to the agent Q?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nC is upper left of R. G is over there and W is on the left of it. R is there and Z is at the 2 position of a clock face. The object D is positioned directly below the object K. W is sitting at the 3:00 position to D. Y is sitting at the 3:00 position to K. G is sitting at the 9:00 position of Z. C is positioned in the lower right corner of K. F is below and to the left of U.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent R and agent K, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent K to the agent R?",
+        "answer": "upper-left",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "C is upper left of R. G is over there and W is on the left of it. R is there and Z is at the 2 position of a clock face. The object D is positioned directly below the object K. W is sitting at the 3:00 position to D. Y is sitting at the 3:00 position to K. G is sitting at the 9:00 position of Z. C is positioned in the lower right corner of K. F is below and to the left of U.",
+            "query": "What is the relation of the agent K to the agent R?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nE is below L with a small gap between them. B is south east of E. R is below B and to the right of B. The object X and V are there. The object V is above and slightly to the left of the object X. H is diagonally to the upper right of Z. X is placed at the lower left of L. The object labeled N is positioned to the right of the object labeled B. R is positioned below N.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent E and agent L, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent L to the agent E?",
+        "answer": "above",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "E is below L with a small gap between them. B is south east of E. R is below B and to the right of B. The object X and V are there. The object V is above and slightly to the left of the object X. H is diagonally to the upper right of Z. X is placed at the lower left of L. The object labeled N is positioned to the right of the object labeled B. R is positioned below N.",
+            "query": "What is the relation of the agent L to the agent E?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nY is over there and X is at the bottom of it. X and B are parallel, and X is to the right of B. N is positioned in the front right corner of X. N is below J and to the right of J. R is on the upper right of J. U and Q are parallel, and U is to the left of Q. Y is at the bottom of O. S is on the right side and below X. T is positioned above O. T is sitting at the 9:00 position of R.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent N and agent S, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent S to the agent N?",
+        "answer": "below",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "Y is over there and X is at the bottom of it. X and B are parallel, and X is to the right of B. N is positioned in the front right corner of X. N is below J and to the right of J. R is on the upper right of J. U and Q are parallel, and U is to the left of Q. Y is at the bottom of O. S is on the right side and below X. T is positioned above O. T is sitting at the 9:00 position of R.",
+            "query": "What is the relation of the agent S to the agent N?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nObject X is above object M and to the right of it, too. M is diagonally below F to the right at a 45 degree angle. The object E is positioned directly below the object M. Q and R are horizontal and Q is to the right of R. M is under H. A is to the right of J with a small gap between them. G is sitting at the lower left position to X. X is to the right of H. E is south east of J.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent J and agent E, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent E to the agent J?",
+        "answer": "lower-right",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "Object X is above object M and to the right of it, too. M is diagonally below F to the right at a 45 degree angle. The object E is positioned directly below the object M. Q and R are horizontal and Q is to the right of R. M is under H. A is to the right of J with a small gap between them. G is sitting at the lower left position to X. X is to the right of H. E is south east of J.",
+            "query": "What is the relation of the agent E to the agent J?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nL is on the top side to X. M is at L's 3 o'clock. X and G are in a vertical line with G below X. Q is to the right and above Z at an angle of about 45 degrees. S is at D's 3 o'clock. Object X is below object M and to the left of it, too. Q is over there and M is on the left of it. U is positioned in the lower left corner of G. G is on the same vertical plane directly below E.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent G and agent Z, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent Z to the agent G?",
+        "answer": "upper-right",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "L is on the top side to X. M is at L's 3 o'clock. X and G are in a vertical line with G below X. Q is to the right and above Z at an angle of about 45 degrees. S is at D's 3 o'clock. Object X is below object M and to the left of it, too. Q is over there and M is on the left of it. U is positioned in the lower left corner of G. G is on the same vertical plane directly below E.",
+            "query": "What is the relation of the agent Z to the agent G?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nD is placed at the lower left of E. D is on the right and S is on the left. Y is over there and C is directly below it. D and L are parallel, and D on the left of L. E is above L with a small gap between them. D is at the bottom and X is on the top. X is diagonally above J to the right at a 45 degree. E is sitting at the lower right position to Y. I is placed at the bottom of Z.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent S and agent Y, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent Y to the agent S?",
+        "answer": "upper-right",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "D is placed at the lower left of E. D is on the right and S is on the left. Y is over there and C is directly below it. D and L are parallel, and D on the left of L. E is above L with a small gap between them. D is at the bottom and X is on the top. X is diagonally above J to the right at a 45 degree. E is sitting at the lower right position to Y. I is placed at the bottom of Z.",
+            "query": "What is the relation of the agent Y to the agent S?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nW is to the top right of X. R is at the bottom and F is on the top. B and X are parallel, and B is to the left of X. F is at the 9 o'clock position relative to H. The object X and R are there. The object R is above and slightly to the left of the object X. U is above and to the left of T. F is placed at the upper right of Z. H is directly below Q. B is over there with R above.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent H and agent W, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent W to the agent H?",
+        "answer": "lower-right",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "W is to the top right of X. R is at the bottom and F is on the top. B and X are parallel, and B is to the left of X. F is at the 9 o'clock position relative to H. The object X and R are there. The object R is above and slightly to the left of the object X. U is above and to the left of T. F is placed at the upper right of Z. H is directly below Q. B is over there with R above.",
+            "query": "What is the relation of the agent W to the agent H?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nK is sitting at the 3:00 position to U. The objects Z and W are over there. The object Z is above and slightly to the right of the object W. R is directly below U. Q is south west of W. K is to the top of P vertically. Z and P are side by side with P at the bottom and Z on the top. D is placed at the upper right of N. R and P are side by side with R to the left and P to the right. H is to the left of U and below U at approximately a 45 degree angle.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent W and agent Z, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent Z to the agent W?",
+        "answer": "upper-right",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "K is sitting at the 3:00 position to U. The objects Z and W are over there. The object Z is above and slightly to the right of the object W. R is directly below U. Q is south west of W. K is to the top of P vertically. Z and P are side by side with P at the bottom and Z on the top. D is placed at the upper right of N. R and P are side by side with R to the left and P to the right. H is to the left of U and below U at approximately a 45 degree angle.",
+            "query": "What is the relation of the agent Z to the agent W?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nV is to the top-right of M. V and Z are side by side with V to the left and Z to the right. O and L are in a horizontal line with O on the left. K is placed in the left direction of F. R is south west of M. L is diagonally to the bottom right of V. J and S are parallel, and J is on top of S. R is on the left side to K. F is under O. L is to the left of N and below N at approximately a 45 degree angle.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent N and agent V, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent V to the agent N?",
+        "answer": "left",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "V is to the top-right of M. V and Z are side by side with V to the left and Z to the right. O and L are in a horizontal line with O on the left. K is placed in the left direction of F. R is south west of M. L is diagonally to the bottom right of V. J and S are parallel, and J is on top of S. R is on the left side to K. F is under O. L is to the left of N and below N at approximately a 45 degree angle.",
+            "query": "What is the relation of the agent V to the agent N?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nG is there and Y is at the 10 position of a clock face. E is upper right to U. W is at the lower side of F. W and O are horizontal and W is to the left of O. E is below F and to the right of F. H is over there and O is at the bottom of it. The objects D and I are over there. The object D is above and slightly to the right of the object I. The object G is upper and slightly to the left of the object E. G and H are next to each other with G on the left and H on the right.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent F and agent E, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent E to the agent F?",
+        "answer": "lower-right",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "G is there and Y is at the 10 position of a clock face. E is upper right to U. W is at the lower side of F. W and O are horizontal and W is to the left of O. E is below F and to the right of F. H is over there and O is at the bottom of it. The objects D and I are over there. The object D is above and slightly to the right of the object I. The object G is upper and slightly to the left of the object E. G and H are next to each other with G on the left and H on the right.",
+            "query": "What is the relation of the agent E to the agent F?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nC is on the top of D and is on the same vertical plane. F is to the right of K and is on the same horizontal plane. L is to the left of Q with a small gap between them. F is over there and A is on the left of it. The object A and Q are there. The object Q is above and slightly to the left of the object A. Z and K are horizontal and Z is to the right of K. N is diagonally above I to the right at a 45 degree. Q is on the top of J and is on the same vertical plane. C and Z are side by side with Z at the bottom and C on the top. C is over there and L is on the left of it.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent A and agent Q, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent Q to the agent A?",
+        "answer": "upper-left",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "C is on the top of D and is on the same vertical plane. F is to the right of K and is on the same horizontal plane. L is to the left of Q with a small gap between them. F is over there and A is on the left of it. The object A and Q are there. The object Q is above and slightly to the left of the object A. Z and K are horizontal and Z is to the right of K. N is diagonally above I to the right at a 45 degree. Q is on the top of J and is on the same vertical plane. C and Z are side by side with Z at the bottom and C on the top. C is over there and L is on the left of it.",
+            "query": "What is the relation of the agent Q to the agent A?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nE is positioned above K. P is on the same vertical plane directly below T. The object M is positioned directly above the object P. L is above and to the left of T. C is diagonally above T to the left at a 45 degree angle. F is over there and L is on the right. N is placed on the top of M. N and L are side by side with N to the right and L to the left. X and M are parallel, and X is to the left of M.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent P and agent T, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent T to the agent P?",
+        "answer": "above",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "E is positioned above K. P is on the same vertical plane directly below T. The object M is positioned directly above the object P. L is above and to the left of T. C is diagonally above T to the left at a 45 degree angle. F is over there and L is on the right. N is placed on the top of M. N and L are side by side with N to the right and L to the left. X and M are parallel, and X is to the left of M.",
+            "query": "What is the relation of the agent T to the agent P?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nN is sitting at the top position to Q. A is at X's 12 o'clock. G is to the right and above X at an angle of about 45 degrees. T presents over O. Z and X are next to each other with Z on the left and X on the right. F is slightly off center to the top left and N is slightly off center to the bottom right. G and Z are next to each other with Z at the bottom G on the top. F is south east of G. N is placed at the lower left of S.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent F and agent N, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent N to the agent F?",
+        "answer": "lower-right",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "N is sitting at the top position to Q. A is at X's 12 o'clock. G is to the right and above X at an angle of about 45 degrees. T presents over O. Z and X are next to each other with Z on the left and X on the right. F is slightly off center to the top left and N is slightly off center to the bottom right. G and Z are next to each other with Z at the bottom G on the top. F is south east of G. N is placed at the lower left of S.",
+            "query": "What is the relation of the agent N to the agent F?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nI and D are next to each other with I on the left and D on the right. A is at R’s 9 o'clock. U is on the top of A and is on the same vertical plane. F is below D. O and G are horizontal and O is to the right of G. I is above F at 10 o'clock. I is diagonally above R to the right at a 45 degree. A is above S.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent R and agent U, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent U to the agent R?",
+        "answer": "upper-left",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "I and D are next to each other with I on the left and D on the right. A is at R’s 9 o'clock. U is on the top of A and is on the same vertical plane. F is below D. O and G are horizontal and O is to the right of G. I is above F at 10 o'clock. I is diagonally above R to the right at a 45 degree. A is above S.",
+            "query": "What is the relation of the agent U to the agent R?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nR is to the upper left of Z. The object Z is positioned above and to the left of object W. N is to the left of X with a small gap between them. L is at C’s 9 o'clock. S is on the lower right of Z. E and F are side by side with E to the right and F to the left. Z and F are parallel, and Z is on top of F. E is over there and C is on the right of it. W is on the left side to C.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent R and agent L, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent L to the agent R?",
+        "answer": "lower-right",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "R is to the upper left of Z. The object Z is positioned above and to the left of object W. N is to the left of X with a small gap between them. L is at C’s 9 o'clock. S is on the lower right of Z. E and F are side by side with E to the right and F to the left. Z and F are parallel, and Z is on top of F. E is over there and C is on the right of it. W is on the left side to C.",
+            "query": "What is the relation of the agent L to the agent R?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nU is over there with Q above. U is on the same horizontal plane directly right to B. Q is on the right side and top of L. The object labeled B is positioned to the right of the object labeled K. B is at the 12 o'clock position relative to I. K is over there and L is on the right. A is above and to the right of E. Object B is below object V and to the right of it, too.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent K and agent V, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent V to the agent K?",
+        "answer": "above",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "U is over there with Q above. U is on the same horizontal plane directly right to B. Q is on the right side and top of L. The object labeled B is positioned to the right of the object labeled K. B is at the 12 o'clock position relative to I. K is over there and L is on the right. A is above and to the right of E. Object B is below object V and to the right of it, too.",
+            "query": "What is the relation of the agent V to the agent K?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nF presents below S. D and Q are side by side with D to the left and Q to the right. The object labeled D is positioned to the right of the object labeled E. G is under M. R is to the right and above P at an angle of about 45 degrees. R is slightly off center to the top left and S is slightly off center to the bottom right. L is diagonally below Q to the left at a 45 degree angle. P is diagonally left and above P. P and E are next to each other with P on the left and E on the right. The object labeled R is positioned to the left of the object labeled L.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent I and agent L, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent L to the agent I?",
+        "answer": "right",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "F presents below S. D and Q are side by side with D to the left and Q to the right. The object labeled D is positioned to the right of the object labeled E. G is under M. R is to the right and above P at an angle of about 45 degrees. R is slightly off center to the top left and S is slightly off center to the bottom right. L is diagonally below Q to the left at a 45 degree angle. P is diagonally left and above P. P and E are next to each other with P on the left and E on the right. The object labeled R is positioned to the left of the object labeled L.",
+            "query": "What is the relation of the agent L to the agent I?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nK and B are side by side with K to the left and B to the right. I is to the left of H horizontally. I is lower left to W. The object labeled P is positioned to the left of the object labeled Z. Z is positioned below B. B is on the same vertical plane directly above Q. I and P are next to each other with I on the left and P on the right. L is to the right of M horizontally. K is above H.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent H and agent K, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent K to the agent H?",
+        "answer": "above",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "K and B are side by side with K to the left and B to the right. I is to the left of H horizontally. I is lower left to W. The object labeled P is positioned to the left of the object labeled Z. Z is positioned below B. B is on the same vertical plane directly above Q. I and P are next to each other with I on the left and P on the right. L is to the right of M horizontally. K is above H.",
+            "query": "What is the relation of the agent K to the agent H?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nI is on the left side to O. G is on the left side of and below S. S is diagonally right and below T. Z and I are both there with the object Z is to the right of object I. J is on the same horizontal plane directly left to U. G is sitting at the 9:00 position of O. The object O is lower and slightly to the right of the object J. E is positioned above and to the left of D. Z is to the bottom-left of J.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent S and agent G, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent G to the agent S?",
+        "answer": "lower-left",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "I is on the left side to O. G is on the left side of and below S. S is diagonally right and below T. Z and I are both there with the object Z is to the right of object I. J is on the same horizontal plane directly left to U. G is sitting at the 9:00 position of O. The object O is lower and slightly to the right of the object J. E is positioned above and to the left of D. Z is to the bottom-left of J.",
+            "query": "What is the relation of the agent G to the agent S?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nY is on the right and Z is on the left. H presents left to I. G is to the left of B with a small gap between them. I is on the right side to Z. L and Z are parallel, and Z is below L. B is to the top of I vertically. P is to the top of S vertically. B presents right to L.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent I and agent G, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent G to the agent I?",
+        "answer": "upper-left",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "Y is on the right and Z is on the left. H presents left to I. G is to the left of B with a small gap between them. I is on the right side to Z. L and Z are parallel, and Z is below L. B is to the top of I vertically. P is to the top of S vertically. B presents right to L.",
+            "query": "What is the relation of the agent G to the agent I?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nU is to the bottom left of V. O is over there and V is on the right of it. E and U are both there with the object E above the object U. V is on the top and K is at the bottom. The object labeled B is positioned to the left of the object labeled O. The object labeled X is positioned to the left of the object labeled K. R is to the top of T vertically. X is at the bottom of O. X is over Q.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent O and agent Q, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent Q to the agent O?",
+        "answer": "below",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "U is to the bottom left of V. O is over there and V is on the right of it. E and U are both there with the object E above the object U. V is on the top and K is at the bottom. The object labeled B is positioned to the left of the object labeled O. The object labeled X is positioned to the left of the object labeled K. R is to the top of T vertically. X is at the bottom of O. X is over Q.",
+            "query": "What is the relation of the agent Q to the agent O?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nG is to the left of S. G is to the bottom-right of H. D is below and to the left of W. Z is positioned below and to the right of T. X is over M. X is at the bottom and W is on the top. Object G is above object F and to the right of it, too. H and Q are horizontal and H is to the right of Q. D and Q are vertical and D is above Q. S is at the bottom of M vertically.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent D and agent Q, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent Q to the agent D?",
+        "answer": "below",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "G is to the left of S. G is to the bottom-right of H. D is below and to the left of W. Z is positioned below and to the right of T. X is over M. X is at the bottom and W is on the top. Object G is above object F and to the right of it, too. H and Q are horizontal and H is to the right of Q. D and Q are vertical and D is above Q. S is at the bottom of M vertically.",
+            "query": "What is the relation of the agent Q to the agent D?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nI is at T's 3 o'clock. I is positioned below U and to the right. B is on the same horizontal plane directly right to K. B is over there and I is directly below it. T and K are vertical and T is below K. K is above and to the right of S. The object Y is lower and slightly to the left of the object I. A and C are horizontal and A is to the right of C.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent U and agent T, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent T to the agent U?",
+        "answer": "below",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "I is at T's 3 o'clock. I is positioned below U and to the right. B is on the same horizontal plane directly right to K. B is over there and I is directly below it. T and K are vertical and T is below K. K is above and to the right of S. The object Y is lower and slightly to the left of the object I. A and C are horizontal and A is to the right of C.",
+            "query": "What is the relation of the agent T to the agent U?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nE and J are parallel, and J is below E. J and W are parallel, and J on the right of W. The object O and W are there. The object O is below and slightly to the right of the object W. G is sitting in the right direction of M. G is at the 6 o'clock position relative to A. J and T are parallel, and J on the left of T. E and M are horizontal and E is to the left of M. W is sitting at the lower left position to G. Z is positioned in the lower left corner of R.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent J and agent W, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent W to the agent J?",
+        "answer": "right",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "E and J are parallel, and J is below E. J and W are parallel, and J on the right of W. The object O and W are there. The object O is below and slightly to the right of the object W. G is sitting in the right direction of M. G is at the 6 o'clock position relative to A. J and T are parallel, and J on the left of T. E and M are horizontal and E is to the left of M. W is sitting at the lower left position to G. Z is positioned in the lower left corner of R.",
+            "query": "What is the relation of the agent W to the agent J?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nC is on the lower left of V. V and X are parallel, and V is to the right of X. X is below W with a small gap between them. The object I is positioned above and to the right of the object U. H is placed at the bottom of Z. V is directly north east of Y. W is to the right of F. C is above and to the right of Z. F is over there and V is at the bottom of it.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent Z and agent C, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent C to the agent Z?",
+        "answer": "upper-right",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "C is on the lower left of V. V and X are parallel, and V is to the right of X. X is below W with a small gap between them. The object I is positioned above and to the right of the object U. H is placed at the bottom of Z. V is directly north east of Y. W is to the right of F. C is above and to the right of Z. F is over there and V is at the bottom of it.",
+            "query": "What is the relation of the agent C to the agent Z?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nG and L are horizontal and G is to the left of L. G and S are parallel, and G on the left of S. X is on top of Q. Q and L are side by side with Q to the left and L to the right. Y and Q are next to each other with Y on the top and Q at the bottom. N and W are parallel, and W is below N.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent G and agent X, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent X to the agent G?",
+        "answer": "above",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "G and L are horizontal and G is to the left of L. G and S are parallel, and G on the left of S. X is on top of Q. Q and L are side by side with Q to the left and L to the right. Y and Q are next to each other with Y on the top and Q at the bottom. N and W are parallel, and W is below N.",
+            "query": "What is the relation of the agent X to the agent G?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nC is positioned down and to the left of P. I is sitting at the 6:00 position to P. E and O are both there with the object O below the object E. F is to the top-right of G. G is there and E is at the 10 position of a clock face. P is diagonally to the upper left of J. Y is north east of Q. I is to the left of J and is on the same horizontal plane. J is below and to the left of F.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent F and agent E, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent E to the agent F?",
+        "answer": "left",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "C is positioned down and to the left of P. I is sitting at the 6:00 position to P. E and O are both there with the object O below the object E. F is to the top-right of G. G is there and E is at the 10 position of a clock face. P is diagonally to the upper left of J. Y is north east of Q. I is to the left of J and is on the same horizontal plane. J is below and to the left of F.",
+            "query": "What is the relation of the agent E to the agent F?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nC and D are parallel, and C on the right of D. G is sitting at the top position to D. The object C is positioned above and to the right of the object P. L is over there and U is directly below it. W is to the top-left of X. G is upper right to X. I is placed in the right direction of C. X is over there and I is on the right of it.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent P and agent X, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent X to the agent P?",
+        "answer": "upper-right",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "C and D are parallel, and C on the right of D. G is sitting at the top position to D. The object C is positioned above and to the right of the object P. L is over there and U is directly below it. W is to the top-left of X. G is upper right to X. I is placed in the right direction of C. X is over there and I is on the right of it.",
+            "query": "What is the relation of the agent X to the agent P?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nQ is lower right of W. M is over there and O is on the left of it. S is to the top-right of Q. S presents right to P. V is placed in the left direction of A. A and S are next to each other with A on the top and S at the bottom. P is at the bottom of V. V is slightly off center to the top left and K is slightly off center to the bottom right.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent Q and agent K, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent K to the agent Q?",
+        "answer": "upper-right",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "Q is lower right of W. M is over there and O is on the left of it. S is to the top-right of Q. S presents right to P. V is placed in the left direction of A. A and S are next to each other with A on the top and S at the bottom. P is at the bottom of V. V is slightly off center to the top left and K is slightly off center to the bottom right.",
+            "query": "What is the relation of the agent K to the agent Q?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nH is to the left of U with a small gap between them. H is to the top of E vertically. H is on the left side of and below N. N is sitting at the 9:00 position of L. U is at the bottom and X is on the top. B is on the upper right of A. L and F are in a horizontal line with L on the left. X is to the left of L. The object N and T are there. The object N is below and slightly to the right of the object T.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent F and agent N, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent N to the agent F?",
+        "answer": "left",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "H is to the left of U with a small gap between them. H is to the top of E vertically. H is on the left side of and below N. N is sitting at the 9:00 position of L. U is at the bottom and X is on the top. B is on the upper right of A. L and F are in a horizontal line with L on the left. X is to the left of L. The object N and T are there. The object N is below and slightly to the right of the object T.",
+            "query": "What is the relation of the agent N to the agent F?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    },
+    {
+        "question": "Story:\nZ is placed at the upper left of M. R is on the same vertical plane directly above T. C is at the 3 o'clock position relative to J. The object labeled E is positioned to the left of the object labeled W. L is on the left side to C. R is on the left side and above L. K is under W. E is placed at the upper right of D. E is on the top of R and is on the same vertical plane. J is sitting at the 6:00 position to K.\n\nPossible answers:\n- above\n- below\n- left\n- lower-left\n- lower-right\n- overlap\n- right\n- upper-left\n- upper-right\n\nUnderstand the spatial relationship between agent R and agent D, and to describe it through only one spatial relation label word from the posible answers, to correctly answer the question: What is the relation of the agent D to the agent R?",
+        "answer": "left",
+        "task_type": "stepgame",
+        "metadata": {
+            "story": "Z is placed at the upper left of M. R is on the same vertical plane directly above T. C is at the 3 o'clock position relative to J. The object labeled E is positioned to the left of the object labeled W. L is on the left side to C. R is on the left side and above L. K is under W. E is placed at the upper right of D. E is on the top of R and is on the same vertical plane. J is sitting at the 6:00 position to K.",
+            "query": "What is the relation of the agent D to the agent R?",
+            "task_name": 4,
+            "reasoning_length": 4,
+            "injected_noise": "",
+            "split_origin": "test"
+        },
+        "id": null
+    }
+]
