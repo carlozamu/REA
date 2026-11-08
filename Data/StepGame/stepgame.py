@@ -564,20 +564,13 @@ Understand the spatial relationship between {name2} and {name1}, and to describe
 
         # --- n=1: Stratified Sampling ---
         elif n == 1:
-            curated_dataset = []
-            # Take 28 from levels 2, 3, 4
-            for level in [2, 3, 4]:
-                curated_dataset.extend(random.sample(by_complexity[level], 28))
-            # Take 1 from all other levels (2, 3, 4 are already done)
-            for level in by_complexity.keys():
-                if level not in [2, 3, 4]:
-                    curated_dataset.extend(random.sample(by_complexity[level], 1))
-            return curated_dataset
+            # Take 90 from level 1
+            return random.sample(by_complexity[1], 90)
 
         # --- n=2: Specific Level Sampling ---
         elif n == 2:
-            # Take 90 from level 6
-            return random.sample(by_complexity[6], 90)
+            # Take 90 from level 2
+            return random.sample(by_complexity[2], 90)
 
         # --- n=3: Specific Level Sampling ---
         elif n == 3:
